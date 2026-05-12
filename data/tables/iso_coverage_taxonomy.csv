@@ -1,0 +1,24 @@
+free_text_name,iso_code,canonical_name,description,evidence_id
+dwelling,COV-A,Coverage A - Dwelling,Main residence structure,COV-A-001
+home,COV-A,Coverage A - Dwelling,Main residence structure,COV-A-001
+main residence,COV-A,Coverage A - Dwelling,Main residence structure,COV-A-001
+other structures,COV-B,Coverage B - Other Structures,Detached structures (sheds garages),COV-B-001
+detached structures,COV-B,Coverage B - Other Structures,Detached structures (sheds garages),COV-B-001
+personal property,COV-C,Coverage C - Personal Property,Contents,COV-C-001
+contents,COV-C,Coverage C - Personal Property,Contents,COV-C-001
+loss of use,COV-D,Coverage D - Loss of Use,Additional living expense and fair rental value,COV-D-001
+additional living expense,COV-D,Coverage D - Loss of Use,Additional living expense and fair rental value,COV-D-001
+ALE,COV-D,Coverage D - Loss of Use,Additional living expense and fair rental value,COV-D-001
+liability,COV-E,Coverage E - Personal Liability,Personal liability,COV-E-001
+personal liability,COV-E,Coverage E - Personal Liability,Personal liability,COV-E-001
+medical payments,COV-F,Coverage F - Medical Payments to Others,Med-pay to others,COV-F-001
+hurricane deductible,END-HURR-DED,Endorsement - Hurricane Deductible,Statutory FL hurricane deductible options,END-HURR-DED-001
+earthquake,END-EQ-CEA,Endorsement - CEA Earthquake Companion,California Earthquake Authority companion,END-EQ-CEA-001
+flood,COV-FLOOD-NFIP,National Flood Insurance Program,NFIP standard or private equivalent,COV-FLOOD-NFIP-001
+sinkhole,END-SINKHOLE,Endorsement - Sinkhole Loss,Optional FL sinkhole beyond CGCC,END-SINKHOLE-001
+ground cover collapse,END-CGCC,Endorsement - Catastrophic Ground Cover Collapse,FL mandatory CGCC per §627.706,END-CGCC-001
+fair plan,COV-FAIR,FAIR Plan basic peril,California FAIR Plan basic peril policy,COV-FAIR-001
+DIC,END-DIC,Difference In Conditions wrap,DIC wrap for FAIR Plan exclusions,END-DIC-001
+water backup,END-WATER-BACKUP,Endorsement - Water Backup of Sewers and Drains,Water backup endorsement,END-WATER-BACKUP-001
+scheduled property,END-SCHED-PERS,Endorsement - Scheduled Personal Property,Scheduled personal property (jewelry art etc),END-SCHED-PERS-001
+ordinance or law,END-ORD-LAW,Endorsement - Ordinance or Law,Increased cost from building code compliance,END-ORD-LAW-001

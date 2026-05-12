@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 980 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tool interaction map">
+<style><![CDATA[
+svg { background: #0a0d12; font-family: 'Inter', system-ui, sans-serif; }
+:root {
+  --bg:#0b0e14; --bg-2:#11151f; --bg-3:#171c28;
+  --ink:#e8e6e0; --ink-2:#b9b6ac; --ink-3:#7b7868;
+  --rule:#2a3042; --rule-2:#1c2030;
+  --amber:#f5a623; --amber-2:#e89110;
+  --cyan:#4dd4ac; --rose:#ff6b9d; --violet:#a07aff;
+  --blue:#5fb3ff; --red:#ff7676;
+  --display:'Fraunces',serif;
+  --serif:'Source Serif 4',Georgia,serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+.svg-box-label{font-family:'JetBrains Mono',monospace;font-size:11px;fill:#e8e6e0;font-weight:500}
+.svg-box-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.1em;font-weight:500}
+.svg-box-sub{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.08em}
+.svg-lane-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;fill:#7b7868;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-title{font-family:'Fraunces',serif;font-size:13px;fill:#e8e6e0;font-style:italic}
+.svg-rail-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#b9b6ac;letter-spacing:.08em}
+.svg-arrow{stroke:#7b7868;stroke-width:1.3;fill:none}
+.svg-arrow.amber{stroke:#f5a623}
+.svg-arrow.cyan{stroke:#4dd4ac}
+.svg-arrow.violet{stroke:#a07aff}
+.svg-arrow.rose{stroke:#ff6b9d}
+.svg-arrow.blue{stroke:#5fb3ff}
+.svg-arrow.red{stroke:#ff7676}
+.svg-arrow.dashed{stroke-dasharray:4 3;opacity:.7}
+.svg-box-fill-bg{fill:#171c28}
+.svg-box-fill-bg-2{fill:#11151f}
+.svg-pill{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#e8e6e0;letter-spacing:.04em}
+.svg-pill-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-result-num{font-family:'JetBrains Mono',monospace;font-size:14px;fill:#f5a623;font-weight:500}
+.svg-result-label{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.1em;text-transform:uppercase}
+.svg-step-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-key-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#e8e6e0}
+.svg-val-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#4dd4ac}
+.svg-cite{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.05em}
+.svg-strike{fill:#7b7868;text-decoration:line-through}
+.svg-winner-glow{filter:drop-shadow(0 0 6px rgba(245,166,35,.45))}
+]]></style>
+  <defs>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7b7868"/></marker>
+    <linearGradient id="red-fill-2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff7676" stop-opacity=".18"/><stop offset="100%" stop-color="#ff7676" stop-opacity=".04"/></linearGradient>
+    <linearGradient id="blue-fill-2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5fb3ff" stop-opacity=".18"/><stop offset="100%" stop-color="#5fb3ff" stop-opacity=".04"/></linearGradient>
+    <linearGradient id="rose-fill-2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff6b9d" stop-opacity=".18"/><stop offset="100%" stop-color="#ff6b9d" stop-opacity=".04"/></linearGradient>
+    <linearGradient id="violet-fill-2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a07aff" stop-opacity=".18"/><stop offset="100%" stop-color="#a07aff" stop-opacity=".04"/></linearGradient>
+    <linearGradient id="amber-fill-2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f5a623" stop-opacity=".18"/><stop offset="100%" stop-color="#f5a623" stop-opacity=".04"/></linearGradient>
+  </defs>
+
+  <!-- Left column: agent boxes -->
+  <text x="20" y="22" class="svg-lane-label">▸ Agent</text>
+  <text x="500" y="22" class="svg-lane-label">▸ Tool clusters</text>
+
+  <!-- StatutoryAgent -->
+  <rect x="20" y="44" width="240" height="68" rx="6" fill="url(#red-fill-2)" stroke="#ff7676" stroke-width="1.4"/>
+  <text x="35" y="66" class="svg-box-num">02</text>
+  <text x="60" y="66" class="svg-box-label">StatutoryAgent</text>
+  <text x="250" y="66" text-anchor="end" class="svg-tiny">REACT + RAG</text>
+  <text x="35" y="86" class="svg-box-sub">Picks queries at runtime; cites</text>
+  <text x="35" y="100" class="svg-box-sub">evidence_id back into the chain.</text>
+
+  <!-- RiskAgent -->
+  <rect x="20" y="160" width="240" height="68" rx="6" fill="url(#red-fill-2)" stroke="#ff7676" stroke-width="1.4"/>
+  <text x="35" y="182" class="svg-box-num">04</text>
+  <text x="60" y="182" class="svg-box-label">RiskAgent</text>
+  <text x="250" y="182" text-anchor="end" class="svg-tiny">REACT</text>
+  <text x="35" y="202" class="svg-box-sub">Adaptive over 7 hazard probes;</text>
+  <text x="35" y="216" class="svg-box-sub">skips irrelevant ones.</text>
+
+  <!-- CoverageAgent -->
+  <rect x="20" y="276" width="240" height="68" rx="6" fill="url(#blue-fill-2)" stroke="#5fb3ff" stroke-width="1.4"/>
+  <text x="35" y="298" class="svg-box-num">05</text>
+  <text x="60" y="298" class="svg-box-label">CoverageAgent</text>
+  <text x="250" y="298" text-anchor="end" class="svg-tiny">PLAN-AND-EXECUTE</text>
+  <text x="35" y="318" class="svg-box-sub">4-step plan: floors, perils, sizing,</text>
+  <text x="35" y="332" class="svg-box-sub">endorsements.</text>
+
+  <!-- PricingAgent -->
+  <rect x="20" y="392" width="240" height="68" rx="6" fill="url(#rose-fill-2)" stroke="#ff6b9d" stroke-width="1.4"/>
+  <text x="35" y="414" class="svg-box-num">06</text>
+  <text x="60" y="414" class="svg-box-label">PricingAgent</text>
+  <text x="250" y="414" text-anchor="end" class="svg-tiny">REWOO</text>
+  <text x="35" y="434" class="svg-box-sub">Planner emits DAG; Workers fan</text>
+  <text x="35" y="448" class="svg-box-sub">in parallel; Solver composes.</text>
+
+  <!-- Validator + Follow-up combined -->
+  <rect x="20" y="508" width="240" height="68" rx="6" fill="url(#amber-fill-2)" stroke="#f5a623" stroke-width="1.4"/>
+  <text x="35" y="530" class="svg-box-num">07</text>
+  <text x="60" y="530" class="svg-box-label">Validator</text>
+  <text x="250" y="530" text-anchor="end" class="svg-tiny">CRITIC-REFINE</text>
+  <text x="35" y="550" class="svg-box-sub">Reuses Pricing tools for the</text>
+  <text x="35" y="564" class="svg-box-sub">cohort + Citizens sanity checks.</text>
+
+  <!-- Follow-up -->
+  <rect x="20" y="608" width="240" height="68" rx="6" fill="url(#violet-fill-2)" stroke="#a07aff" stroke-width="1.4"/>
+  <text x="35" y="630" class="svg-box-num">13</text>
+  <text x="60" y="630" class="svg-box-label">FollowupExplain</text>
+  <text x="250" y="630" text-anchor="end" class="svg-tiny">SELF-ASK</text>
+  <text x="35" y="650" class="svg-box-sub">Shares rag_retrieve with the</text>
+  <text x="35" y="664" class="svg-box-sub">StatutoryAgent.</text>
+
+  <!-- Connector arrows from left to right -->
+  <path d="M 260 78 L 380 78" class="svg-arrow red" marker-end="url(#arrow-amber)" stroke="#ff7676"/>
+  <path d="M 260 194 L 380 194" class="svg-arrow red" stroke="#ff7676" marker-end="url(#arrow-amber)"/>
+  <path d="M 260 310 L 380 310" class="svg-arrow blue" stroke="#5fb3ff" marker-end="url(#arrow-amber)"/>
+  <path d="M 260 426 L 380 426" class="svg-arrow rose" stroke="#ff6b9d" marker-end="url(#arrow-amber)"/>
+  <path d="M 260 542 L 380 542" class="svg-arrow amber" marker-end="url(#arrow-amber)"/>
+  <path d="M 260 642 C 320 642, 320 78, 380 78" class="svg-arrow violet" marker-end="url(#arrow-violet)" stroke="#a07aff"/>
+
+  <!-- Right column tool clusters -->
+
+  <!-- StatutoryAgent: rag_retrieve + 3 active corpora -->
+  <rect x="380" y="44" width="580" height="100" rx="6" fill="#11151f" stroke="#ff7676" stroke-width="0.8" stroke-opacity=".6"/>
+  <text x="395" y="64" class="svg-box-label" fill="#ff7676">rag_retrieve · 3 jurisdiction-tagged corpora</text>
+  <!-- corpora pills -->
+  <g font-family="JetBrains Mono, monospace" font-size="9.5px" fill="#e8e6e0">
+    <rect x="395" y="76" width="78" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="434" y="90" text-anchor="middle">ca_doi</text>
+    <rect x="479" y="76" width="78" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="518" y="90" text-anchor="middle">fl_dfs</text>
+    <rect x="563" y="76" width="92" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="609" y="90" text-anchor="middle">fema_p312</text>
+    <rect x="661" y="76" width="98" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="710" y="90" text-anchor="middle">gse_lender</text>
+    <rect x="765" y="76" width="135" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="832" y="90" text-anchor="middle">calfire_defensible</text>
+    <rect x="395" y="104" width="158" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="474" y="118" text-anchor="middle">naic_consumer_guide</text>
+    <rect x="559" y="104" width="100" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="609" y="118" text-anchor="middle">iii_handbook</text>
+  </g>
+
+  <!-- RiskAgent: 7 hazard tools -->
+  <rect x="380" y="160" width="580" height="100" rx="6" fill="#11151f" stroke="#ff7676" stroke-width="0.8" stroke-opacity=".6"/>
+  <text x="395" y="180" class="svg-box-label" fill="#ff7676">HAZARD_TOOLS × 7 · deterministic geographic probes</text>
+  <g font-family="JetBrains Mono, monospace" font-size="9.5px" fill="#e8e6e0">
+    <rect x="395" y="192" width="125" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="458" y="206" text-anchor="middle">fema_nri_risk</text>
+    <rect x="526" y="192" width="115" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="584" y="206" text-anchor="middle">ca_fire_zone</text>
+    <rect x="647" y="192" width="95" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="695" y="206" text-anchor="middle">flood_zone</text>
+    <rect x="748" y="192" width="120" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="808" y="206" text-anchor="middle">usgs_seismic</text>
+    <rect x="395" y="220" width="135" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="463" y="234" text-anchor="middle">noaa_hurricane</text>
+    <rect x="536" y="220" width="160" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="616" y="234" text-anchor="middle">dog_breed_liability</text>
+    <rect x="702" y="220" width="175" height="20" rx="10" fill="#0a0d12" stroke="#ff7676" stroke-width=".7"/><text x="789" y="234" text-anchor="middle">risk_factor_breakdown</text>
+  </g>
+
+  <!-- CoverageAgent: 6 coverage tools -->
+  <rect x="380" y="276" width="580" height="100" rx="6" fill="#11151f" stroke="#5fb3ff" stroke-width="0.8" stroke-opacity=".6"/>
+  <text x="395" y="296" class="svg-box-label" fill="#5fb3ff">COVERAGE_TOOLS × 6 · product menus + statutory endorsements</text>
+  <g font-family="JetBrains Mono, monospace" font-size="9.5px" fill="#e8e6e0">
+    <rect x="395" y="308" width="140" height="20" rx="10" fill="#0a0d12" stroke="#5fb3ff" stroke-width=".7"/><text x="465" y="322" text-anchor="middle">replacement_cost</text>
+    <rect x="541" y="308" width="115" height="20" rx="10" fill="#0a0d12" stroke="#5fb3ff" stroke-width=".7"/><text x="599" y="322" text-anchor="middle">lender_floor</text>
+    <rect x="662" y="308" width="130" height="20" rx="10" fill="#0a0d12" stroke="#5fb3ff" stroke-width=".7"/><text x="727" y="322" text-anchor="middle">coverage_rules</text>
+    <rect x="395" y="336" width="195" height="20" rx="10" fill="#0a0d12" stroke="#5fb3ff" stroke-width=".7"/><text x="492" y="350" text-anchor="middle">cea_earthquake_recommender · CA</text>
+    <rect x="596" y="336" width="175" height="20" rx="10" fill="#0a0d12" stroke="#5fb3ff" stroke-width=".7"/><text x="683" y="350" text-anchor="middle">fl_hurricane_deductible · FL</text>
+    <rect x="777" y="336" width="180" height="20" rx="10" fill="#0a0d12" stroke="#5fb3ff" stroke-width=".7"/><text x="867" y="350" text-anchor="middle">wind_mitigation_discount · FL</text>
+  </g>
+
+  <!-- PricingAgent: 5 pricing tools with data files -->
+  <rect x="380" y="392" width="580" height="100" rx="6" fill="#11151f" stroke="#ff6b9d" stroke-width="0.8" stroke-opacity=".6"/>
+  <text x="395" y="412" class="svg-box-label" fill="#ff6b9d">PRICING_TOOLS × 5 · deterministic CSV/JSON lookups</text>
+  <g font-family="JetBrains Mono, monospace" font-size="9.5px" fill="#e8e6e0">
+    <rect x="395" y="424" width="130" height="20" rx="10" fill="#0a0d12" stroke="#ff6b9d" stroke-width=".7"/><text x="460" y="438" text-anchor="middle">base_premium</text>
+    <rect x="531" y="424" width="220" height="20" rx="10" fill="#0a0d12" stroke="#ff6b9d" stroke-width=".7"/><text x="641" y="438" text-anchor="middle">pricing_multiplier_lookup</text>
+    <rect x="757" y="424" width="200" height="20" rx="10" fill="#0a0d12" stroke="#ff6b9d" stroke-width=".7"/><text x="857" y="438" text-anchor="middle">home_value_scaling_factor</text>
+    <rect x="395" y="452" width="195" height="20" rx="10" fill="#0a0d12" stroke="#ff6b9d" stroke-width=".7"/><text x="492" y="466" text-anchor="middle">citizens_benchmark · FL</text>
+    <rect x="596" y="452" width="160" height="20" rx="10" fill="#0a0d12" stroke="#ff6b9d" stroke-width=".7"/><text x="676" y="466" text-anchor="middle">cohort_benchmark</text>
+    <text x="762" y="466" class="svg-tiny">→ CSV/JSON in data/tables/</text>
+  </g>
+
+  <!-- Validator: reuses cohort + Citizens -->
+  <rect x="380" y="508" width="580" height="68" rx="6" fill="#11151f" stroke="#f5a623" stroke-width="0.8" stroke-opacity=".6"/>
+  <text x="395" y="528" class="svg-box-label" fill="#f5a623">Sanity checks · reuses PRICING_TOOLS</text>
+  <text x="395" y="546" class="svg-box-sub">cohort_benchmark (outlier detection above p90 → Council escalation)</text>
+  <text x="395" y="560" class="svg-box-sub">citizens_benchmark (FL only — admitted-vs-Citizens cost comparison)</text>
+
+  <!-- Followup: reuses rag_retrieve -->
+  <rect x="380" y="608" width="580" height="68" rx="6" fill="#11151f" stroke="#a07aff" stroke-width="0.8" stroke-opacity=".6"/>
+  <text x="395" y="628" class="svg-box-label" fill="#a07aff">Shared retrieval · reuses rag_retrieve</text>
+  <text x="395" y="646" class="svg-box-sub">Keyword-routed corpus pick on user's follow-up question.</text>
+  <text x="395" y="660" class="svg-box-sub">Plus pricing_factor_chain replay from the prior thread's DecisionTrace.</text>
+</svg>

@@ -1,0 +1,79 @@
+{
+  "risk_factors": [
+    {
+      "factor": "Flood",
+      "severity": "high",
+      "rationale": "The property is located in flood zone AE, which is a Special Flood Hazard Area (SFHA), indicating a high risk of flooding."
+    },
+    {
+      "factor": "Hurricane",
+      "severity": "high",
+      "rationale": "Miami-Dade County has a very high hurricane exposure tier with 28 landfalls within 75 miles since 1900, including a Category 5 hurricane."
+    },
+    {
+      "factor": "Overall Hazard",
+      "severity": "high",
+      "rationale": "The FEMA National Risk Index indicates a very high overall risk score for Miami-Dade County, with significant expected annual losses from hurricanes and floods."
+    }
+  ],
+  "recommended_coverages": [
+    {
+      "type": "Coverage A - Dwelling",
+      "limit": "674016",
+      "rationale": "Cov A = max(lender floor, rebuild cost, home value) = $674,016; settlement actual_cash_value."
+    },
+    {
+      "type": "Coverage B - Other Structures",
+      "limit": "67401",
+      "rationale": "Default 10% of Coverage A per HO-3 form."
+    },
+    {
+      "type": "Coverage C - Personal Property",
+      "limit": "337008",
+      "rationale": "Default 50% of Coverage A; raise via scheduled property if jewellery/art exposure."
+    },
+    {
+      "type": "Coverage D - Loss of Use",
+      "limit": "12 months",
+      "rationale": "Standard HO-3 12-month default"
+    },
+    {
+      "type": "Coverage E - Personal Liability",
+      "limit": "300000",
+      "rationale": "Recommended liability limit; uplifted from $100K default given pool/dog exposures."
+    },
+    {
+      "type": "Endorsement - Catastrophic Ground Cover Collapse",
+      "limit": "full Coverage A",
+      "rationale": "Mandatory CGCC inclusion per Fla. Stat. \u00a7627.706."
+    },
+    {
+      "type": "Hurricane Deductible Option (2% of Coverage A ($13,480))",
+      "limit": "2% of Coverage A ($13,480)",
+      "rationale": "Statutorily-mandated option per Fla. Stat. \u00a7627.701; premium factor 1.2\u00d7."
+    },
+    {
+      "type": "Hurricane Deductible Option (5% of Coverage A ($33,700))",
+      "limit": "5% of Coverage A ($33,700)",
+      "rationale": "Statutorily-mandated option per Fla. Stat. \u00a7627.701; premium factor 1.0\u00d7."
+    },
+    {
+      "type": "Hurricane Deductible Option (10% of Coverage A ($67,401))",
+      "limit": "10% of Coverage A ($67,401)",
+      "rationale": "Statutorily-mandated option per Fla. Stat. \u00a7627.701; premium factor 0.85\u00d7."
+    },
+    {
+      "type": "Wind Mitigation Inspection (advisory)",
+      "limit": "up to 45% wind premium discount",
+      "rationale": "Recommend OIR-B1-1802 inspection; documented mitigation features unlock the wind discount."
+    }
+  ],
+  "premium_range": {
+    "low": 5849.7,
+    "high": 9749.5,
+    "currency": "USD"
+  },
+  "explanation": "Premium composed from: 1.00 (Base premium (FL 2026)) \u00d7 1.36 (Home-value scaling) \u00d7 1.00 (claims (0)) \u00d7 1.00 (credit_score (neutral_1.0x)). Statutory rules applied: FL-CREDIT-NEUTRAL, FL-HURRICANE-DEDUCTIBLE, FL-CGCC-MANDATORY, FL-SINKHOLE-OPTIONAL, FL-WIND-MITIGATION.",
+  "confidence_score": 0.925,
+  "warnings": []
+}

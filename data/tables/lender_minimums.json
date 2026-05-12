@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "rules": [
+    {
+      "rule_id": "GSE-FANNIE-B7-3-02",
+      "evidence_id": "LENDER-FANNIE-B7-3-02-2024",
+      "citation": "Fannie Mae Selling Guide B7-3-02 (rev. 2024)",
+      "applies_when": {"has_mortgage": true},
+      "coverage_a_floor_rule": "min(replacement_cost, unpaid_principal_balance)",
+      "settlement_basis": "replacement_cost_value",
+      "form_required": "HO-3"
+    },
+    {
+      "rule_id": "GSE-FREDDIE-4703-2",
+      "evidence_id": "LENDER-FREDDIE-4703-2-2024",
+      "citation": "Freddie Mac Single-Family Seller/Servicer Guide §4703.2 (rev. 2024)",
+      "applies_when": {"has_mortgage": true},
+      "coverage_a_floor_rule": "min(replacement_cost, unpaid_principal_balance)",
+      "settlement_basis": "replacement_cost_value",
+      "form_required": "HO-3"
+    },
+    {
+      "rule_id": "NFIP-MANDATORY-PURCHASE",
+      "evidence_id": "LENDER-NFIP-FDPA-1973",
+      "citation": "Flood Disaster Protection Act of 1973 (42 U.S.C. §4012a)",
+      "applies_when": {"in_sfha": true, "has_mortgage": true},
+      "coverage": "flood_nfip_or_private_equivalent",
+      "settlement_basis": "replacement_cost_or_actual_cash_value_per_NFIP",
+      "private_equivalent_acceptability": "Biggert-Waters discretionary acceptance"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+# Per-agent safety budgets (per-call enforcement).
+# Action-on-breach: fallback | abort | warn
+
+defaults:
+  max_react_iterations: 8
+  max_input_tokens: 8000
+  max_output_tokens: 2000
+  max_total_tokens: 10000
+  action_on_breach: fallback
+
+roles:
+  INTENT_CLASSIFIER:
+    max_react_iterations: 1
+    max_output_tokens: 500
+    max_total_tokens: 3000
+  STATUTORY_AGENT:
+    max_react_iterations: 8
+    max_output_tokens: 4000
+    max_total_tokens: 15000
+  ELIGIBILITY_TRIAGE:
+    max_react_iterations: 1
+    max_output_tokens: 1500
+  RISK_AGENT:
+    max_react_iterations: 6
+    max_output_tokens: 2500
+    max_total_tokens: 12000
+  COVERAGE_PLANNER:
+    max_react_iterations: 4
+    max_output_tokens: 3000
+    max_total_tokens: 12000
+  COVERAGE_EXECUTOR:
+    max_react_iterations: 1
+    max_output_tokens: 2000
+  PRICING_PLANNER:
+    max_react_iterations: 4
+    max_output_tokens: 3000
+    max_total_tokens: 12000
+  PRICING_SOLVER:
+    max_react_iterations: 1
+    max_output_tokens: 2000
+  VALIDATOR:
+    max_react_iterations: 1
+    max_output_tokens: 1500
+  COUNCIL_UNDERWRITER:
+    max_react_iterations: 1
+    max_output_tokens: 1000
+  COUNCIL_ACTUARY:
+    max_react_iterations: 1
+    max_output_tokens: 1000
+  COUNCIL_COMPLIANCE:
+    max_react_iterations: 1
+    max_output_tokens: 1000
+  COUNCIL_ADVOCATE:
+    max_react_iterations: 1
+    max_output_tokens: 1000
+  COUNTERFACTUAL:
+    max_react_iterations: 1
+    max_output_tokens: 1500
+  FOLLOWUP_EXPLAIN:
+    max_react_iterations: 2
+    max_output_tokens: 2000
+  CONFIDENCE_EXPLAINER:
+    max_react_iterations: 1
+    max_output_tokens: 600
+    max_total_tokens: 3000

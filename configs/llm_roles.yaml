@@ -1,0 +1,31 @@
+# =============================================================================
+# Per-agent LLM role configuration
+# Format: "<provider>:<model>"  (resolved via langchain.init_chat_model)
+# Precedence: env var QA_LLM_<ROLE>  >  llm_roles.local.yaml  >  this file  >  hardcoded DEFAULTS in llm_registry.py
+# =============================================================================
+
+# ── Top-level routing / classification (cheap & fast)
+INTENT_CLASSIFIER:        openai:gpt-4o-mini
+ELIGIBILITY_TRIAGE:       openai:gpt-4o-mini
+FOLLOWUP_EXPLAIN:         openai:gpt-4o-mini
+
+# ── Core reasoning agents (strong, tool-using)
+RISK_AGENT:               openai:gpt-4o
+COVERAGE_PLANNER:         openai:gpt-4o
+COVERAGE_EXECUTOR:        openai:gpt-4o-mini
+PRICING_PLANNER:          openai:gpt-4o
+PRICING_SOLVER:           openai:gpt-4o
+
+# ── Validator + Council
+VALIDATOR:                openai:gpt-4o
+COUNCIL_UNDERWRITER:      openai:gpt-4o
+COUNCIL_ADVOCATE:         openai:gpt-4o
+COUNCIL_ACTUARY:          openai:gpt-4o
+COUNCIL_COMPLIANCE:       openai:gpt-4o   # never downgrade — VETO power
+
+# ── Counterfactual (Reflexion outer + ToT inner — needs strong reasoning)
+COUNTERFACTUAL:           openai:gpt-4o
+
+# ── Statutory + Confidence (post-DEC-0011/0012)
+STATUTORY_AGENT:          openai:gpt-4o          # ReAct over RAG corpora
+CONFIDENCE_EXPLAINER:     openai:gpt-4o-mini     # prose summary only; never math

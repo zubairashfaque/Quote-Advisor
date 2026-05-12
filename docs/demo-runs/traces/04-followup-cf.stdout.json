@@ -1,0 +1,74 @@
+{
+  "risk_factors": [
+    {
+      "factor": "Wildfire",
+      "severity": "medium",
+      "rationale": "The property is in a Moderate Fire Hazard Severity Zone."
+    },
+    {
+      "factor": "Earthquake",
+      "severity": "high",
+      "rationale": "The seismic parameters indicate a Very High risk with a PGA of 0.93g."
+    },
+    {
+      "factor": "Flood",
+      "severity": "low",
+      "rationale": "The property is in Flood Zone X and not in a Special Flood Hazard Area (SFHA)."
+    },
+    {
+      "factor": "General Hazard",
+      "severity": "high",
+      "rationale": "The overall FEMA National Risk Index score for Los Angeles County is Very High."
+    },
+    {
+      "factor": "Pool",
+      "severity": "medium",
+      "rationale": "The property has a pool, which increases liability risk."
+    },
+    {
+      "factor": "Claims History",
+      "severity": "medium",
+      "rationale": "There is a history of 1 claim."
+    }
+  ],
+  "recommended_coverages": [
+    {
+      "type": "Coverage A - Dwelling",
+      "limit": "1005360",
+      "rationale": "Cov A = max(lender floor, rebuild cost, home value) = $1,005,360; settlement actual_cash_value."
+    },
+    {
+      "type": "Coverage B - Other Structures",
+      "limit": "100536",
+      "rationale": "Default 10% of Coverage A per HO-3 form."
+    },
+    {
+      "type": "Coverage C - Personal Property",
+      "limit": "502680",
+      "rationale": "Default 50% of Coverage A; raise via scheduled property if jewellery/art exposure."
+    },
+    {
+      "type": "Coverage D - Loss of Use",
+      "limit": "24 months",
+      "rationale": "Cal. Ins. Code \u00a72051.5 minimum 24 months following declared disaster"
+    },
+    {
+      "type": "Coverage E - Personal Liability",
+      "limit": "300000",
+      "rationale": "Recommended liability limit; uplifted from $100K default given pool/dog exposures."
+    },
+    {
+      "type": "Endorsement - CEA Earthquake Companion",
+      "limit": "20% deductible ($201,072)",
+      "rationale": "Vintage or undetermined foundation; higher deductible is the conservative recommendation."
+    }
+  ],
+  "premium_range": {
+    "low": 4790.46,
+    "high": 7984.11,
+    "currency": "USD"
+  },
+  "explanation": "Premium composed from: 1.00 (Base premium (CA 2026)) \u00d7 2.17 (Home-value scaling) \u00d7 1.33 (claims (1)) \u00d7 1.12 (pool (true)) \u00d7 1.00 (credit_score (dropped)). Statutory rules applied: CA-PROP103-CREDIT, CA-AGE-NON-PRIMARY, CA-EQ-OFFER, CA-COVD-MIN-24MO, CA-STDFORM-2071, CA-FAIRPLAN-CHECK.",
+  "confidence_score": 0.95,
+  "warnings": []
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.1",
+  "synthetic_fallback": true,
+  "fetched_at": "2026-05-11T19:38:06.452305+00:00",
+  "note": "live FEMA NFHL fetch failed; this snapshot is anchored on real publicly-disclosed FIRM panel IDs / BFEs",
+  "sources_used": [
+    "synthetic-curated"
+  ],
+  "entries": [
+    {
+      "lat": 34.0522,
+      "lon": -118.2437,
+      "city": "Los Angeles, CA",
+      "flood_zone": "X",
+      "in_sfha": false,
+      "bfe_ft": null,
+      "panel_id": "06037C1620G",
+      "source": "synthetic-curated",
+      "evidence_id": "NFHL-06037C1620G-X-2008"
+    },
+    {
+      "lat": 34.0696,
+      "lon": -118.4053,
+      "city": "Beverly Hills, CA",
+      "flood_zone": "X",
+      "in_sfha": false,
+      "bfe_ft": null,
+      "panel_id": "06037C1610G",
+      "source": "synthetic-curated",
+      "evidence_id": "NFHL-06037C1610G-X-2008"
+    },
+    {
+      "lat": 32.7157,
+      "lon": -117.1611,
+      "city": "San Diego, CA",
+      "flood_zone": "X",
+      "in_sfha": false,
+      "bfe_ft": null,
+      "panel_id": "06073C1610H",
+      "source": "synthetic-curated",
+      "evidence_id": "NFHL-06073C1610H-X-2019"
+    },
+    {
+      "lat": 37.7749,
+      "lon": -122.4194,
+      "city": "San Francisco, CA",
+      "flood_zone": "X",
+      "in_sfha": false,
+      "bfe_ft": null,
+      "panel_id": "06075C0102G",
+      "source": "synthetic-curated",
+      "evidence_id": "NFHL-06075C0102G-X-2015"
+    },
+    {
+      "lat": 25.7617,
+      "lon": -80.1918,
+      "city": "Miami, FL",
+      "flood_zone": "AE",
+      "in_sfha": true,
+      "bfe_ft": 8,
+      "panel_id": "12086C0312L",
+      "source": "synthetic-curated",
+      "evidence_id": "NFHL-12086C0312L-AE-2024"
+    },
+    {
+      "lat": 25.8089,
+      "lon": -80.1235,
+      "city": "Miami Beach, FL",
+      "flood_zone": "VE",
+      "in_sfha": true,
+      "bfe_ft": 11,
+      "panel_id": "12086C0317L",
+      "source": "synthetic-curated",
+      "evidence_id": "NFHL-12086C0317L-VE-2024"
+    },
+    {
+      "lat": 27.9506,
+      "lon": -82.4572,
+      "city": "Tampa, FL",
+      "flood_zone": "AE",
+      "in_sfha": true,
+      "bfe_ft": 9,
+      "panel_id": "12057C0353H",
+      "source": "synthetic-curated",
+      "evidence_id": "NFHL-12057C0353H-AE-2017"
+    },
+    {
+      "lat": 30.3322,
+      "lon": -81.6557,
+      "city": "Jacksonville, FL",
+      "flood_zone": "X",
+      "in_sfha": false,
+      "bfe_ft": null,
+      "panel_id": "12031C0407J",
+      "source": "synthetic-curated",
+      "evidence_id": "NFHL-12031C0407J-X-2014"
+    },
+    {
+      "lat": 28.5384,
+      "lon": -81.3789,
+      "city": "Orlando, FL",
+      "flood_zone": "X",
+      "in_sfha": false,
+      "bfe_ft": null,
+      "panel_id": "12095C0235H",
+      "source": "synthetic-curated",
+      "evidence_id": "NFHL-12095C0235H-X-2009"
+    }
+  ]
+}

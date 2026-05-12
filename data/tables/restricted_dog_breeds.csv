@@ -1,0 +1,11 @@
+breed,liability_tier,surcharge_multiplier,frequently_excluded,evidence_id,source_notes
+Pit Bull,Very High,1.45,true,DOG-PB-001,"Top-3 most-cited restricted breed across major personal lines carriers; used for liability tier reference only - the take-home demos do not reference dog data, this table ships for completeness."
+Rottweiler,Very High,1.40,true,DOG-RW-001,Frequently excluded by major carriers
+Doberman Pinscher,High,1.30,true,DOG-DP-001,Frequently excluded
+German Shepherd,Moderate,1.15,false,DOG-GS-001,Sometimes restricted; not commonly excluded
+Akita,High,1.30,true,DOG-AK-001,Frequently excluded
+Chow Chow,High,1.30,true,DOG-CC-001,Frequently excluded
+Wolf hybrid,Very High,1.50,true,DOG-WH-001,Most restrictive category
+Mastiff,Moderate,1.15,false,DOG-MS-001,Sometimes restricted
+Husky,Moderate,1.10,false,DOG-HU-001,Sometimes restricted
+Other,Low,1.00,false,DOG-OTHER-001,Default no surcharge

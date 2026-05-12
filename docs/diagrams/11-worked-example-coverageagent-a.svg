@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 820 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coverage list · CA Profile A">
+<style><![CDATA[
+svg { background: #0a0d12; font-family: 'Inter', system-ui, sans-serif; }
+:root {
+  --bg:#0b0e14; --bg-2:#11151f; --bg-3:#171c28;
+  --ink:#e8e6e0; --ink-2:#b9b6ac; --ink-3:#7b7868;
+  --rule:#2a3042; --rule-2:#1c2030;
+  --amber:#f5a623; --amber-2:#e89110;
+  --cyan:#4dd4ac; --rose:#ff6b9d; --violet:#a07aff;
+  --blue:#5fb3ff; --red:#ff7676;
+  --display:'Fraunces',serif;
+  --serif:'Source Serif 4',Georgia,serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+.svg-box-label{font-family:'JetBrains Mono',monospace;font-size:11px;fill:#e8e6e0;font-weight:500}
+.svg-box-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.1em;font-weight:500}
+.svg-box-sub{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.08em}
+.svg-lane-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;fill:#7b7868;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-title{font-family:'Fraunces',serif;font-size:13px;fill:#e8e6e0;font-style:italic}
+.svg-rail-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#b9b6ac;letter-spacing:.08em}
+.svg-arrow{stroke:#7b7868;stroke-width:1.3;fill:none}
+.svg-arrow.amber{stroke:#f5a623}
+.svg-arrow.cyan{stroke:#4dd4ac}
+.svg-arrow.violet{stroke:#a07aff}
+.svg-arrow.rose{stroke:#ff6b9d}
+.svg-arrow.blue{stroke:#5fb3ff}
+.svg-arrow.red{stroke:#ff7676}
+.svg-arrow.dashed{stroke-dasharray:4 3;opacity:.7}
+.svg-box-fill-bg{fill:#171c28}
+.svg-box-fill-bg-2{fill:#11151f}
+.svg-pill{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#e8e6e0;letter-spacing:.04em}
+.svg-pill-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-result-num{font-family:'JetBrains Mono',monospace;font-size:14px;fill:#f5a623;font-weight:500}
+.svg-result-label{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.1em;text-transform:uppercase}
+.svg-step-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-key-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#e8e6e0}
+.svg-val-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#4dd4ac}
+.svg-cite{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.05em}
+.svg-strike{fill:#7b7868;text-decoration:line-through}
+.svg-winner-glow{filter:drop-shadow(0 0 6px rgba(245,166,35,.45))}
+]]></style>
+  <!-- Header -->
+  <text x="20" y="20" class="svg-step-num" fill="#5fb3ff">▸ recommended_coverages · CA · HO-3 BASE 5 + CEA ENDORSEMENT</text>
+  <rect x="20" y="30" width="780" height="234" rx="5" fill="url(#blue-fill)" stroke="#5fb3ff" stroke-width="0.8"/>
+  <!-- table header -->
+  <text x="34" y="50" class="svg-cite" fill="#f5a623">#</text>
+  <text x="56" y="50" class="svg-cite" fill="#f5a623">COVERAGE</text>
+  <text x="430" y="50" class="svg-cite" fill="#f5a623">LIMIT</text>
+  <text x="630" y="50" class="svg-cite" fill="#f5a623">SOURCE / RULE</text>
+  <line x1="34" y1="56" x2="785" y2="56" stroke="#2a3042" stroke-width="0.7"/>
+
+  <!-- Coverage rows -->
+  <text x="34" y="76" class="svg-pill" fill="#5fb3ff">1</text>
+  <text x="56" y="76" class="svg-key-text">Coverage A — Dwelling</text>
+  <text x="430" y="76" class="svg-val-text" fill="#f5a623">$920,000</text>
+  <text x="630" y="76" class="svg-cite">max(floor, RCV, value)</text>
+
+  <text x="34" y="98" class="svg-pill" fill="#5fb3ff">2</text>
+  <text x="56" y="98" class="svg-key-text">Coverage B — Other Structures</text>
+  <text x="430" y="98" class="svg-val-text">$92,000</text>
+  <text x="630" y="98" class="svg-cite">10% of Cov A · HO-3 default</text>
+
+  <text x="34" y="120" class="svg-pill" fill="#5fb3ff">3</text>
+  <text x="56" y="120" class="svg-key-text">Coverage C — Personal Property</text>
+  <text x="430" y="120" class="svg-val-text">$460,000</text>
+  <text x="630" y="120" class="svg-cite">50% of Cov A · HO-3 default</text>
+
+  <text x="34" y="142" class="svg-pill" fill="#5fb3ff">4</text>
+  <text x="56" y="142" class="svg-key-text">Coverage D — Loss of Use</text>
+  <text x="430" y="142" class="svg-val-text">24 months</text>
+  <text x="630" y="142" class="svg-cite" fill="#ff7676">CA §2051.5 minimum</text>
+
+  <text x="34" y="164" class="svg-pill" fill="#5fb3ff">5</text>
+  <text x="56" y="164" class="svg-key-text">Coverage E — Personal Liability</text>
+  <text x="430" y="164" class="svg-val-text">$300,000</text>
+  <text x="630" y="164" class="svg-cite">uplift from $100K · pool</text>
+
+  <text x="34" y="186" class="svg-pill" fill="#5fb3ff">6</text>
+  <text x="56" y="186" class="svg-key-text">Endorsement — CEA Earthquake Companion</text>
+  <text x="430" y="186" class="svg-val-text">15% deductible</text>
+  <text x="630" y="186" class="svg-cite" fill="#ff7676">CA §10081 · CA-EQ-OFFER</text>
+
+  <!-- Summary line -->
+  <line x1="34" y1="206" x2="785" y2="206" stroke="#2a3042" stroke-width="0.7" stroke-dasharray="3 2"/>
+  <text x="34" y="225" class="svg-cite">Statutory drivers: §2051.5 (24-mo LoU), §10081 (mandatory CEA offer)</text>
+  <text x="34" y="242" class="svg-cite">Tools called: replacement_cost · lender_floor · coverage_rules · cea_earthquake_recommender</text>
+</svg>

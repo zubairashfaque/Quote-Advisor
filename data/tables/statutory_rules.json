@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "description": "Pre-LLM statutory rules. Each rule has a deterministic trigger (matched against the raw profile) and a deterministic action (mutates sanitized_profile or appends to triggered_rules). The engine never calls an LLM.",
+  "rules": [
+    {
+      "rule_id": "CA-PROP103-CREDIT",
+      "jurisdiction": "CA",
+      "citation": "Cal. Code Regs. tit. 10, §2632.5 (Prop 103)",
+      "evidence_id": "RULE-CA-PROP103-CREDIT",
+      "trigger": {"state": "CA"},
+      "action": {"type": "drop_field", "field": "credit_score"},
+      "severity": "mandatory",
+      "rationale": "California Proposition 103 prohibits use of credit information in personal lines homeowners underwriting/rating."
+    },
+    {
+      "rule_id": "CA-AGE-NON-PRIMARY",
+      "jurisdiction": "CA",
+      "citation": "Cal. Ins. Code §1861.02 (Prop 103 mandatory factors)",
+      "evidence_id": "RULE-CA-AGE-NON-PRIMARY",
+      "trigger": {"state": "CA"},
+      "action": {"type": "flag_field_treatment", "field": "age", "treatment": "non_primary_only"},
+      "severity": "mandatory",
+      "rationale": "Under Prop 103 the three mandatory rating factors are driving record (auto), miles driven (auto), and years of driving experience. For homeowners, age may be used only as a non-primary factor and never as a sole basis for rating or underwriting."
+    },
+    {
+      "rule_id": "CA-EQ-OFFER",
+      "jurisdiction": "CA",
+      "citation": "Cal. Ins. Code §10081 (CEA mandatory offer)",
+      "evidence_id": "RULE-CA-EQ-OFFER",
+      "trigger": {"state": "CA"},
+      "action": {"type": "require_offer", "offer": "CEA_earthquake", "form": "CEA"},
+      "severity": "mandatory",
+      "rationale": "Insurers writing residential property in California must offer earthquake coverage (typically through the California Earthquake Authority) at every new business and renewal."
+    },
+    {
+      "rule_id": "CA-COVD-MIN-24MO",
+      "jurisdiction": "CA",
+      "citation": "Cal. Ins. Code §2051.5 (additional living expense minimums)",
+      "evidence_id": "RULE-CA-COVD-MIN-24MO",
+      "trigger": {"state": "CA"},
+      "action": {"type": "set_floor", "field": "loss_of_use_months", "value": 24},
+      "severity": "mandatory",
+      "rationale": "California requires Loss-of-Use / Additional Living Expense coverage of at least 24 months following a declared disaster (12 months for non-disaster losses); the 24-month floor binds for catastrophe perils."
+    },
+    {
+      "rule_id": "CA-STDFORM-2071",
+      "jurisdiction": "CA",
+      "citation": "Cal. Ins. Code §2071 (standard form)",
+      "evidence_id": "RULE-CA-STDFORM-2071",
+      "trigger": {"state": "CA"},
+      "action": {"type": "require_form", "form": "CA-Standard-Form-Fire"},
+      "severity": "mandatory",
+      "rationale": "California prescribes a standard fire policy form (§2071) that establishes baseline insuring agreements and conditions for fire coverage in residential policies."
+    },
+    {
+      "rule_id": "CA-FAIRPLAN-CHECK",
+      "jurisdiction": "CA",
+      "citation": "Cal. Ins. Code §10090 et seq. (FAIR Plan Act)",
+      "evidence_id": "RULE-CA-FAIRPLAN-CHECK",
+      "trigger": {"state": "CA"},
+      "action": {"type": "route_market", "route_hint": "fair_plan_check_if_fhsz_high"},
+      "severity": "advisory",
+      "rationale": "When the property sits in a CAL FIRE Fire Hazard Severity Zone of High or Very High, the admitted market often declines and the FAIR Plan (basic peril) plus a Difference-In-Conditions wrap is the operative route."
+    },
+    {
+      "rule_id": "FL-CREDIT-NEUTRAL",
+      "jurisdiction": "FL",
+      "citation": "Fla. Stat. §626.9741(7)",
+      "evidence_id": "RULE-FL-CREDIT-NEUTRAL",
+      "trigger": {"state": "FL", "credit_score": null},
+      "action": {"type": "flag_field_treatment", "field": "credit_score", "treatment": "neutral_1.0x"},
+      "severity": "mandatory",
+      "rationale": "Florida statute requires that when credit information is unavailable for an applicant, the insurer must apply a neutral credit factor (treated as 1.0×) rather than penalising the applicant. This is the load-bearing protection for Profile B."
+    },
+    {
+      "rule_id": "FL-HURRICANE-DEDUCTIBLE",
+      "jurisdiction": "FL",
+      "citation": "Fla. Stat. §627.701",
+      "evidence_id": "RULE-FL-HURRICANE-DEDUCTIBLE",
+      "trigger": {"state": "FL"},
+      "action": {"type": "require_offer", "offer": "hurricane_deductible_options", "options": ["$500", "2%", "5%", "10%"]},
+      "severity": "mandatory",
+      "rationale": "Personal residential policies in Florida must offer the insured a choice of hurricane deductibles: a flat $500 (where dwelling ≤ $250K) and percentages of 2%, 5%, and 10% of Coverage A."
+    },
+    {
+      "rule_id": "FL-CGCC-MANDATORY",
+      "jurisdiction": "FL",
+      "citation": "Fla. Stat. §627.706 (Citrus / catastrophic ground cover collapse)",
+      "evidence_id": "RULE-FL-CGCC-MANDATORY",
+      "trigger": {"state": "FL"},
+      "action": {"type": "require_coverage", "coverage": "catastrophic_ground_cover_collapse"},
+      "severity": "mandatory",
+      "rationale": "Florida law requires every personal lines residential policy to include catastrophic ground cover collapse (CGCC) coverage; broader sinkhole coverage is offered as an option with a 14-point rejection notice."
+    },
+    {
+      "rule_id": "FL-SINKHOLE-OPTIONAL",
+      "jurisdiction": "FL",
+      "citation": "Fla. Stat. §627.706(2) (sinkhole loss optional endorsement)",
+      "evidence_id": "RULE-FL-SINKHOLE-OPTIONAL",
+      "trigger": {"state": "FL"},
+      "action": {"type": "require_offer", "offer": "sinkhole_endorsement", "with_rejection_notice": true},
+      "severity": "advisory",
+      "rationale": "Sinkhole loss coverage beyond CGCC is optional in Florida; insurers must offer it with a 14-point statutory rejection notice if the insured declines."
+    },
+    {
+      "rule_id": "FL-WIND-MITIGATION",
+      "jurisdiction": "FL",
+      "citation": "Fla. OIR Form OIR-B1-1802",
+      "evidence_id": "RULE-FL-WIND-MITIGATION",
+      "trigger": {"state": "FL"},
+      "action": {"type": "require_offer", "offer": "wind_mitigation_inspection", "form": "OIR-B1-1802"},
+      "severity": "advisory",
+      "rationale": "Florida requires insurers to apply mitigation discounts for wind-resistive construction features documented on form OIR-B1-1802 (roof shape/cover/deck, opening protection, secondary water resistance). Discount can reach ~45% of wind premium."
+    },
+    {
+      "rule_id": "GSE-COV-A-FLOOR",
+      "jurisdiction": "*",
+      "citation": "Fannie Mae Selling Guide B7-3-02 (property insurance requirements)",
+      "evidence_id": "RULE-GSE-COV-A-FLOOR",
+      "trigger": {"has_mortgage": true},
+      "action": {"type": "set_floor", "field": "coverage_a", "value_rule": "min(replacement_cost, unpaid_principal_balance)"},
+      "severity": "mandatory",
+      "rationale": "GSE-eligible mortgages require the dwelling coverage limit be at least the lesser of replacement cost value or the unpaid principal balance, with replacement-cost (not actual-cash-value) settlement."
+    },
+    {
+      "rule_id": "NFIP-MANDATORY",
+      "jurisdiction": "*",
+      "citation": "Flood Disaster Protection Act of 1973 (42 U.S.C. §4012a)",
+      "evidence_id": "RULE-NFIP-MANDATORY",
+      "trigger": {"in_sfha": true, "has_mortgage": true},
+      "action": {"type": "require_coverage", "coverage": "flood_nfip_or_private_equivalent"},
+      "severity": "mandatory",
+      "rationale": "Federally-backed mortgages on properties in a Special Flood Hazard Area must carry flood insurance (NFIP or private equivalent meeting Biggert-Waters acceptability)."
+    },
+    {
+      "rule_id": "STATE-SUPPORTED",
+      "jurisdiction": "*",
+      "citation": "Product scope: California and Florida only",
+      "evidence_id": "RULE-STATE-SUPPORTED",
+      "trigger": {"state_not_in": ["CA", "FL"]},
+      "action": {"type": "route_market", "route_hint": "informational_out_of_jurisdiction"},
+      "severity": "advisory",
+      "rationale": "This system's statutory engine and rate filings cover California and Florida only; profiles in other states are routed to an informational-only response and confidence is capped."
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 1180 1320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agent pipeline diagram">
+<style><![CDATA[
+svg { background: #0a0d12; font-family: 'Inter', system-ui, sans-serif; }
+:root {
+  --bg:#0b0e14; --bg-2:#11151f; --bg-3:#171c28;
+  --ink:#e8e6e0; --ink-2:#b9b6ac; --ink-3:#7b7868;
+  --rule:#2a3042; --rule-2:#1c2030;
+  --amber:#f5a623; --amber-2:#e89110;
+  --cyan:#4dd4ac; --rose:#ff6b9d; --violet:#a07aff;
+  --blue:#5fb3ff; --red:#ff7676;
+  --display:'Fraunces',serif;
+  --serif:'Source Serif 4',Georgia,serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+.svg-box-label{font-family:'JetBrains Mono',monospace;font-size:11px;fill:#e8e6e0;font-weight:500}
+.svg-box-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.1em;font-weight:500}
+.svg-box-sub{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.08em}
+.svg-lane-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;fill:#7b7868;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-title{font-family:'Fraunces',serif;font-size:13px;fill:#e8e6e0;font-style:italic}
+.svg-rail-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#b9b6ac;letter-spacing:.08em}
+.svg-arrow{stroke:#7b7868;stroke-width:1.3;fill:none}
+.svg-arrow.amber{stroke:#f5a623}
+.svg-arrow.cyan{stroke:#4dd4ac}
+.svg-arrow.violet{stroke:#a07aff}
+.svg-arrow.rose{stroke:#ff6b9d}
+.svg-arrow.blue{stroke:#5fb3ff}
+.svg-arrow.red{stroke:#ff7676}
+.svg-arrow.dashed{stroke-dasharray:4 3;opacity:.7}
+.svg-box-fill-bg{fill:#171c28}
+.svg-box-fill-bg-2{fill:#11151f}
+.svg-pill{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#e8e6e0;letter-spacing:.04em}
+.svg-pill-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-result-num{font-family:'JetBrains Mono',monospace;font-size:14px;fill:#f5a623;font-weight:500}
+.svg-result-label{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.1em;text-transform:uppercase}
+.svg-step-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-key-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#e8e6e0}
+.svg-val-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#4dd4ac}
+.svg-cite{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.05em}
+.svg-strike{fill:#7b7868;text-decoration:line-through}
+.svg-winner-glow{filter:drop-shadow(0 0 6px rgba(245,166,35,.45))}
+]]></style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7b7868"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#f5a623"/></marker>
+    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a07aff"/></marker>
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4dd4ac"/></marker>
+    <linearGradient id="violet-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a07aff" stop-opacity=".18"/><stop offset="100%" stop-color="#a07aff" stop-opacity=".05"/></linearGradient>
+    <linearGradient id="red-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff7676" stop-opacity=".15"/><stop offset="100%" stop-color="#ff7676" stop-opacity=".04"/></linearGradient>
+    <linearGradient id="cyan-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4dd4ac" stop-opacity=".15"/><stop offset="100%" stop-color="#4dd4ac" stop-opacity=".04"/></linearGradient>
+    <linearGradient id="blue-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5fb3ff" stop-opacity=".15"/><stop offset="100%" stop-color="#5fb3ff" stop-opacity=".04"/></linearGradient>
+    <linearGradient id="rose-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff6b9d" stop-opacity=".15"/><stop offset="100%" stop-color="#ff6b9d" stop-opacity=".04"/></linearGradient>
+    <linearGradient id="amber-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f5a623" stop-opacity=".18"/><stop offset="100%" stop-color="#f5a623" stop-opacity=".05"/></linearGradient>
+    <linearGradient id="grey-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7b7868" stop-opacity=".12"/><stop offset="100%" stop-color="#7b7868" stop-opacity=".03"/></linearGradient>
+  </defs>
+
+  <!-- Top input rail · centered at x=590 -->
+  <rect x="390" y="18" width="400" height="46" rx="6" fill="url(#amber-fill)" stroke="#f5a623" stroke-width="1.2"/>
+  <text x="590" y="38" text-anchor="middle" class="svg-box-num">CLI · INPUT RAIL</text>
+  <text x="590" y="55" text-anchor="middle" class="svg-box-sub">raw_profile · followup_question · thread_id</text>
+  <line x1="590" y1="64" x2="590" y2="92" class="svg-arrow amber" marker-end="url(#arrow-amber)"/>
+
+  <!-- IntentClassifier · centered at x=590 -->
+  <rect x="420" y="96" width="340" height="76" rx="6" fill="url(#violet-fill)" stroke="#a07aff" stroke-width="1.4"/>
+  <text x="440" y="120" class="svg-box-num">01</text>
+  <text x="465" y="120" class="svg-box-label">IntentClassifier</text>
+  <text x="745" y="120" text-anchor="end" class="svg-tiny">SELF-ASK · 1 LLM</text>
+  <text x="440" y="142" class="svg-box-sub">Routes to one of four lanes via 4-binary sub-questions.</text>
+  <text x="440" y="158" class="svg-box-sub">Two short-circuit paths bypass the LLM entirely.</text>
+
+  <!-- Lane labels -->
+  <text x="120" y="200" class="svg-lane-label" fill="#f5a623">▸ Lane · NEW_QUOTE</text>
+  <text x="580" y="215" class="svg-lane-label" fill="#a07aff">▸ EXPLANATION</text>
+  <text x="580" y="345" class="svg-lane-label" fill="#a07aff">▸ COUNTERFACTUAL</text>
+  <text x="580" y="475" class="svg-lane-label" fill="#7b7868">▸ OUT_OF_SCOPE</text>
+
+  <!-- Branching from IntentClassifier · clean trunk topology -->
+  <!-- NEW_QUOTE: curves down-left from IntentClassifier's left-bottom to NEW_QUOTE column center x=285 -->
+  <path d="M 480 172 C 480 200, 285 200, 285 222" class="svg-arrow" marker-end="url(#arrow)"/>
+  <!-- Right-column trunk: from IntentClassifier's right-bottom curves to x=500, then drops vertically -->
+  <path d="M 710 172 C 710 188, 500 188, 500 220" class="svg-arrow violet"/>
+  <line x1="500" y1="220" x2="500" y2="534" class="svg-arrow violet"/>
+  <line x1="500" y1="278" x2="570" y2="278" class="svg-arrow violet" marker-end="url(#arrow-violet)"/>
+  <line x1="500" y1="411" x2="570" y2="411" class="svg-arrow violet" marker-end="url(#arrow-violet)"/>
+  <line x1="500" y1="530" x2="570" y2="530" class="svg-arrow dashed" marker-end="url(#arrow)"/>
+
+  <!-- NEW_QUOTE lane boxes · widened to width=380, recentered at x=305 -->
+  <!-- 02 Statutory -->
+  <rect x="115" y="222" width="340" height="64" rx="6" fill="url(#red-fill)" stroke="#ff7676" stroke-width="1.2"/>
+  <text x="130" y="244" class="svg-box-num">02</text>
+  <text x="155" y="244" class="svg-box-label">StatutoryAgent</text>
+  <text x="445" y="244" text-anchor="end" class="svg-tiny">REACT + RAG</text>
+  <text x="130" y="262" class="svg-box-sub">5-phase: pre-filter → ReAct over rag_retrieve →</text>
+  <text x="130" y="276" class="svg-box-sub">emit → self-check → deterministic safety net</text>
+  <line x1="285" y1="286" x2="285" y2="310" class="svg-arrow" marker-end="url(#arrow)"/>
+
+  <!-- 03 Eligibility -->
+  <rect x="115" y="310" width="340" height="58" rx="6" fill="url(#cyan-fill)" stroke="#4dd4ac" stroke-width="1.2"/>
+  <text x="130" y="332" class="svg-box-num">03</text>
+  <text x="155" y="332" class="svg-box-label">EligibilityTriage</text>
+  <text x="445" y="332" text-anchor="end" class="svg-tiny">TREE-OF-THOUGHTS</text>
+  <text x="130" y="350" class="svg-box-sub">4 market branches scored, pruned, picked.</text>
+  <text x="130" y="362" class="svg-box-sub">All 4 persisted in DecisionTrace.</text>
+  <line x1="285" y1="368" x2="285" y2="390" class="svg-arrow" marker-end="url(#arrow)"/>
+
+  <!-- 04 Risk -->
+  <rect x="115" y="390" width="340" height="58" rx="6" fill="url(#red-fill)" stroke="#ff7676" stroke-width="1.2"/>
+  <text x="130" y="412" class="svg-box-num">04</text>
+  <text x="155" y="412" class="svg-box-label">RiskAgent</text>
+  <text x="445" y="412" text-anchor="end" class="svg-tiny">REACT · 3-5 TOOLS</text>
+  <text x="130" y="430" class="svg-box-sub">Adaptive over 7 hazard probes.</text>
+  <text x="130" y="442" class="svg-box-sub">Severity mapped from tool outputs.</text>
+  <line x1="285" y1="448" x2="285" y2="470" class="svg-arrow" marker-end="url(#arrow)"/>
+
+  <!-- 05 Coverage -->
+  <rect x="115" y="470" width="340" height="58" rx="6" fill="url(#blue-fill)" stroke="#5fb3ff" stroke-width="1.2"/>
+  <text x="130" y="492" class="svg-box-num">05</text>
+  <text x="155" y="492" class="svg-box-label">CoverageAgent</text>
+  <text x="445" y="492" text-anchor="end" class="svg-tiny">PLAN-AND-EXECUTE</text>
+  <text x="130" y="510" class="svg-box-sub">4-step plan over 6 coverage tools.</text>
+  <text x="130" y="522" class="svg-box-sub">LLM polish · deterministic core ships.</text>
+  <line x1="285" y1="528" x2="285" y2="552" class="svg-arrow" marker-end="url(#arrow)"/>
+
+  <!-- 06 Pricing (with nested boxes) -->
+  <rect x="115" y="552" width="340" height="146" rx="6" fill="url(#rose-fill)" stroke="#ff6b9d" stroke-width="1.4"/>
+  <text x="130" y="574" class="svg-box-num">06</text>
+  <text x="155" y="574" class="svg-box-label">PricingAgent</text>
+  <text x="445" y="574" text-anchor="end" class="svg-tiny">REWOO</text>
+  <!-- Planner -->
+  <rect x="130" y="586" width="310" height="26" rx="4" fill="#0a0d12" stroke="#ff6b9d" stroke-width="0.8" stroke-opacity=".5"/>
+  <text x="140" y="602" class="svg-box-sub" fill="#e8e6e0">⚡ Planner</text>
+  <text x="430" y="602" text-anchor="end" class="svg-tiny">1 LLM → 7-9 task DAG</text>
+  <!-- Workers (parallel) -->
+  <rect x="130" y="618" width="310" height="36" rx="4" fill="#0a0d12" stroke="#ff6b9d" stroke-width="0.8" stroke-opacity=".5"/>
+  <text x="140" y="634" class="svg-box-sub" fill="#e8e6e0">⚡ Workers × 9    ║║║║║║║║║</text>
+  <text x="430" y="634" text-anchor="end" class="svg-tiny">PARALLEL · NO LLM</text>
+  <text x="140" y="646" class="svg-tiny">Send-fan: csv/json lookups + arithmetic</text>
+  <!-- Solver -->
+  <rect x="130" y="660" width="310" height="26" rx="4" fill="#0a0d12" stroke="#ff6b9d" stroke-width="0.8" stroke-opacity=".5"/>
+  <text x="140" y="676" class="svg-box-sub" fill="#e8e6e0">⚡ Solver</text>
+  <text x="430" y="676" text-anchor="end" class="svg-tiny">1 LLM · prose only</text>
+  <line x1="285" y1="698" x2="285" y2="722" class="svg-arrow" marker-end="url(#arrow)"/>
+
+  <!-- 07 Validator -->
+  <rect x="115" y="722" width="340" height="50" rx="6" fill="url(#amber-fill)" stroke="#f5a623" stroke-width="1.2"/>
+  <text x="130" y="744" class="svg-box-num">07</text>
+  <text x="155" y="744" class="svg-box-label">Validator</text>
+  <text x="445" y="744" text-anchor="end" class="svg-tiny">4 HARD CHECKS</text>
+  <text x="130" y="762" class="svg-box-sub">monotonicity · Cov A floor · no violations · cohort</text>
+
+  <!-- Escalation branch to Council -->
+  <path d="M 285 772 L 285 790 L 285 810" class="svg-arrow dashed" marker-end="url(#arrow)"/>
+  <text x="292" y="786" class="svg-tiny">escalate?</text>
+
+  <!-- 08 Council -->
+  <rect x="115" y="810" width="340" height="50" rx="6" fill="url(#amber-fill)" stroke="#f5a623" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <text x="130" y="832" class="svg-box-num">08</text>
+  <text x="155" y="832" class="svg-box-label">Council</text>
+  <text x="445" y="832" text-anchor="end" class="svg-tiny">4 PERSONAS · COMPL = VETO</text>
+  <text x="130" y="850" class="svg-box-sub">Critic-refine — only fires on escalation</text>
+  <line x1="285" y1="860" x2="285" y2="882" class="svg-arrow" marker-end="url(#arrow)"/>
+
+  <!-- 09 Confidence -->
+  <rect x="115" y="882" width="340" height="50" rx="6" fill="url(#cyan-fill)" stroke="#4dd4ac" stroke-width="1.2"/>
+  <text x="130" y="904" class="svg-box-num">09</text>
+  <text x="155" y="904" class="svg-box-label">ConfidenceAggregator</text>
+  <text x="445" y="904" text-anchor="end" class="svg-tiny">8 SIGNALS · DEC-0004/12</text>
+  <text x="130" y="922" class="svg-box-sub">Deterministic + augmentative LLM rationale</text>
+
+  <!-- EXPLANATION lane (vertically stacked, top of right column · extra spacing) -->
+  <rect x="570" y="232" width="540" height="92" rx="6" fill="url(#violet-fill)" stroke="#a07aff" stroke-width="1.2"/>
+  <text x="588" y="258" class="svg-box-num">13</text>
+  <text x="616" y="258" class="svg-box-label">FollowupExplain</text>
+  <text x="1098" y="258" text-anchor="end" class="svg-tiny">SELF-ASK · 1 LLM</text>
+  <text x="588" y="280" class="svg-box-sub">Walks the persisted DecisionTrace; never re-prompts upstream agents.</text>
+  <text x="588" y="297" class="svg-box-sub">Optional keyword-routed RAG retrieval enriches the answer.</text>
+  <text x="588" y="314" class="svg-box-sub">~5× cheaper than NEW_QUOTE · ~$0.005 / ~3s</text>
+
+  <!-- COUNTERFACTUAL lane (vertical stack — middle · extra spacing above) -->
+  <rect x="570" y="362" width="540" height="98" rx="6" fill="url(#violet-fill)" stroke="#a07aff" stroke-width="1.2"/>
+  <text x="588" y="388" class="svg-box-num">12</text>
+  <text x="616" y="388" class="svg-box-label">Counterfactual</text>
+  <text x="1098" y="388" text-anchor="end" class="svg-tiny">REFLEXION · STATE FORK</text>
+  <text x="588" y="410" class="svg-box-sub">Deep-copy GraphState; mutate one field; re-run Risk → Coverage → Pricing</text>
+  <text x="588" y="427" class="svg-box-sub">on the fork. market_route held constant; StatutoryAgent NOT re-run.</text>
+  <text x="588" y="444" class="svg-box-sub">StateDiffTool produces delta · ~$0.015 / ~12s</text>
+
+  <!-- OUT_OF_SCOPE lane (vertical stack — bottom · extra spacing above) -->
+  <rect x="570" y="492" width="540" height="76" rx="6" fill="url(#grey-fill)" stroke="#7b7868" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <text x="588" y="518" class="svg-box-num" fill="#7b7868">11</text>
+  <text x="616" y="518" class="svg-box-label" fill="#b9b6ac">refusal_node</text>
+  <text x="1098" y="518" text-anchor="end" class="svg-tiny">NO PIPELINE WORK</text>
+  <text x="588" y="540" class="svg-box-sub">Polite refusal output for non-insurance questions.</text>
+  <text x="588" y="557" class="svg-box-sub">~$0.001 / &lt;1s · single Intent classify call only</text>
+
+  <!-- Convergence lines into output_assembler · clean trunk topology -->
+  <!-- NEW_QUOTE lane: curves from Confidence (new center x=285) to assembler top-left -->
+  <path d="M 285 932 C 285 970, 525 970, 525 992" class="svg-arrow amber" marker-end="url(#arrow-amber)"/>
+  <!-- Right-column box exit lines (connectors to merge trunk, no arrowheads) -->
+  <line x1="1110" y1="278" x2="1150" y2="278" class="svg-arrow violet"/>
+  <line x1="1110" y1="411" x2="1150" y2="411" class="svg-arrow violet"/>
+  <line x1="1110" y1="530" x2="1150" y2="530" class="svg-arrow dashed"/>
+  <!-- Right merge trunk: vertical at x=1150 -->
+  <line x1="1150" y1="278" x2="1150" y2="940" class="svg-arrow violet"/>
+  <!-- Final curve from right trunk to assembler top-right -->
+  <path d="M 1150 940 C 1150 980, 655 970, 655 992" class="svg-arrow violet" marker-end="url(#arrow-violet)"/>
+
+  <!-- output_assembler · centered under wider viewBox at x=435 (center x=590) -->
+  <rect x="435" y="992" width="310" height="76" rx="6" fill="url(#amber-fill)" stroke="#f5a623" stroke-width="1.6"/>
+  <text x="455" y="1014" class="svg-box-num">10</text>
+  <text x="480" y="1014" class="svg-box-label">output_assembler</text>
+  <text x="735" y="1014" text-anchor="end" class="svg-tiny">PYDANTIC QuoteOutput</text>
+  <text x="455" y="1032" class="svg-box-sub">risk_factors · recommended_coverages · premium_range</text>
+  <text x="455" y="1046" class="svg-box-sub">explanation · confidence_score · warnings</text>
+  <text x="455" y="1060" class="svg-box-sub">factor_chain · triggered_rules · decision_trace</text>
+
+  <!-- MemorySaver bottom · aligned with assembler -->
+  <rect x="435" y="1110" width="310" height="56" rx="6" fill="#0a0d12" stroke="#7b7868" stroke-width="1" stroke-dasharray="2 2"/>
+  <ellipse cx="590" cy="1110" rx="155" ry="6" fill="#0a0d12" stroke="#7b7868" stroke-width="1" stroke-dasharray="2 2"/>
+  <text x="590" y="1132" text-anchor="middle" class="svg-box-num">MEMORYSAVER · SQLITE</text>
+  <text x="590" y="1148" text-anchor="middle" class="svg-box-sub">Persists state by thread_id — enables Follow-up + Counterfactual without re-running</text>
+
+  <!-- thread_id resume annotation · subtle inline note (recentered) -->
+  <text x="590" y="1186" text-anchor="middle" class="svg-tiny" fill="#7b7868">↻  On follow-up or counterfactual, state is restored from thread_id and the pipeline resumes from the relevant lane.</text>
+</svg>

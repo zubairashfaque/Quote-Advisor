@@ -1,0 +1,7 @@
+Counterfactual answer:
+  If your property did not have a pool, your insurance premium would decrease by
+$513 on the low end and $855 on the high end, reflecting a 10.7% reduction. 
+Originally, your premium ranged from $4,790 to $7,984, but without a pool, it 
+would range from $4,277 to $7,129. This scenario is considered plausible, as it 
+involves changes to the premium range, pricing factor chain, and risk factors.
+

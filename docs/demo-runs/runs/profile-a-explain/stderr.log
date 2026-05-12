@@ -1,0 +1,77 @@
+/home/zubair-ashfaque/refocusai/.venv/lib/python3.13/site-packages/langgraph/checkpoint/serde/encrypted.py:5: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+Deserializing unregistered type quote_advisor.schemas.RuleSeverity from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'RuleSeverity')]
+Deserializing unregistered type quote_advisor.schemas.RuleFire from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'RuleFire')]
+Deserializing unregistered type quote_advisor.schemas.IntentLabel from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'IntentLabel')]
+Deserializing unregistered type quote_advisor.schemas.EligibilityRoute from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'EligibilityRoute')]
+Deserializing unregistered type quote_advisor.schemas.Severity from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'Severity')]
+Deserializing unregistered type quote_advisor.schemas.RiskFactor from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'RiskFactor')]
+Deserializing unregistered type quote_advisor.schemas.RecommendedCoverage from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'RecommendedCoverage')]
+Deserializing unregistered type quote_advisor.schemas.PremiumRange from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'PremiumRange')]
+Deserializing unregistered type quote_advisor.schemas.FactorChainEntry from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'FactorChainEntry')]
+Deserializing unregistered type quote_advisor.schemas.DecisionNode from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'DecisionNode')]
+Deserializing unregistered type quote_advisor.schemas.ConfidenceBreakdown from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'ConfidenceBreakdown')]
+Deserializing unregistered type quote_advisor.schemas.QuoteOutput from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'QuoteOutput')]
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 5295.23it/s]
+
+DecisionTrace
+DEC-001  IntentClassifier    Initial profile classified as new_quote (no 
+follow-up text).
+DEC-002  StatutoryAgent      ReAct agent fired 6 rule(s) (6 retrieval(s); 0 
+dropped by self-check). [CDI-PROP103-01, CDI-PROP103-01, CDI-PROP103-01, 
+CDI-COVD-01, CDI-STDFORM-01, CDI-FAIR-01]
+DEC-003  EligibilityTriage   market_route=fair_dic: The FAIR Plan + 
+Difference-In-Conditions wrap is the most viable option given the high FHSZ tier
+in California, with a score of 0.85. The admitted market option has a lower 
+score of 0.2, and while surplus lines are available, they come with a cost 
+penalty. Citizens is not applicable as it is Florida-only.
+DEC-004  RiskAgent           Identified 6 risk factor(s). 
+[FHSZ-OBJ-04391-LRA-2024, PGA-LAT34.0522-LON-118.2437-2026, 
+NFHL-06037C1620G-X-2008, NRI-CA-06037-2025]
+DEC-005  CoverageAgent       Plan-and-Execute -> 6 coverage line(s). 
+[NAIC-CG-COVERAGE-01, CEA-RULES-2025, RCV-CA-900-2026, RULE-CA-EQ-OFFER, 
+RULE-CA-COVD-MIN-24MO, III-HB-PRICING-01]
+DEC-006  PricingPlanner      ReWOO plan emitted with 9 tasks.
+DEC-007  PricingAgent        Premium range $4,790-$7,984; chain length 5. 
+[BENCH-CA-2026-NEWSWEEK, MULT-SCALING-PER100K, MULT-CLAIMS-1, MULT-POOL-HIGH, 
+MULT-CREDIT-DROPPED-CA-PROP103]
+DEC-008  Validator           Deterministic checks: 0 flag(s); 
+council_invoked=False.
+DEC-009  ConfidenceAggregator  confidence_overall=0.95 (council_invoked=False).
+DEC-001  IntentClassifier    Intent=explanation; rationale=The user is asking 
+for clarification on the cost of a previously-issued quote.
+DEC-002  FollowupExplain     Answered follow-up; corpus=ca_doi; chunks=3. 
+[CDI-FAIR-01, CDI-STDFORM-01, CDI-COVD-01]
+
+Statutory agent · phase=agent · retrievals=6 · rules=6
+  1. corpus=ca_doi jurisdiction=CA q='FAIR Plan' → 3 chunks (CDI-FAIR-01, 
+CDI-STDFORM-01, CDI-FAIR-01)
+  2. corpus=ca_doi jurisdiction=CA q='earthquake offer' → 3 chunks 
+(CDI-PROP103-01, CDI-PROP103-01, CDI-FAIR-01)
+  3. corpus=ca_doi jurisdiction=CA q='Prop 103 credit' → 3 chunks 
+(CDI-PROP103-01, CDI-PROP103-01, CDI-PROP103-01)
+  4. corpus=ca_doi jurisdiction=CA q='loss-of-use' → 3 chunks (CDI-STDFORM-01, 
+CDI-FAIR-01, CDI-COVD-01)
+  5. corpus=ca_doi jurisdiction=CA q='age' → 3 chunks (CDI-PROP103-01, 
+CDI-COVD-01, CDI-PROP103-01)
+  6. corpus=ca_doi jurisdiction=CA q='standard form' → 3 chunks (CDI-STDFORM-01,
+CDI-STDFORM-01, CDI-STDFORM-01)
+
+Confidence breakdown: overall=0.95 risk=1.0 coverage=1.0 pricing=1.0 
+grounding=1.0 council_invoked=False council_verdict=None 
+rationale_summary='Strong signals in risk, coverage, pricing, and grounding 
+contribute to high confidence. No statutory caps were applied, and the absence 
+of prior claims or violations supports this assessment. To further enhance 
+confidence, maintaining consistent data quality and compliance with statutory 
+requirements will be beneficial.'
+
+Confidence rationale (LLM):
+  Strong signals in risk, coverage, pricing, and grounding contribute to high 
+confidence. No statutory caps were applied, and the absence of prior claims or 
+violations supports this assessment. To further enhance confidence, maintaining 
+consistent data quality and compliance with statutory requirements will be 
+beneficial.
+
+LangSmith trace: 
+https://smith.langchain.com/projects/refocusai/traces?metadata=thread_id:demo-a
+Tip: filter LangSmith by metadata.thread_id == 'demo-a' to scope to this run.

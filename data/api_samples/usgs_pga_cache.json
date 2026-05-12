@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "source": "USGS Design Maps Web Service - ASCE 7-22 (https://earthquake.usgs.gov/ws/designmaps/asce7-22.json)",
+  "fetched_at": "2026-05-11T19:35:48.445421+00:00",
+  "site_class_assumed": "C",
+  "risk_category_assumed": "II",
+  "notes": "PGA values are real fetched ASCE 7-22 mapped Maximum Considered Earthquake values. Tier mapping: Very High >= 0.6g, High >= 0.4g, Moderate >= 0.2g, Low < 0.2g.",
+  "entries": [
+    {
+      "lat": 34.0522,
+      "lon": -118.2437,
+      "city": "Los Angeles, CA",
+      "county_fips": "06037",
+      "pga_g": 0.93,
+      "sds": 1.53,
+      "sd1": 0.68,
+      "tier": "Very High",
+      "evidence_id": "PGA-LAT34.0522-LON-118.2437-2026"
+    },
+    {
+      "lat": 34.0696,
+      "lon": -118.4053,
+      "city": "Beverly Hills, CA",
+      "county_fips": "06037",
+      "pga_g": 0.99,
+      "sds": 1.62,
+      "sd1": 0.8,
+      "tier": "Very High",
+      "evidence_id": "PGA-LAT34.0696-LON-118.4053-2026"
+    },
+    {
+      "lat": 32.7157,
+      "lon": -117.1611,
+      "city": "San Diego, CA",
+      "county_fips": "06073",
+      "pga_g": 0.73,
+      "sds": 1.13,
+      "sd1": 0.48,
+      "tier": "Very High",
+      "evidence_id": "PGA-LAT32.7157-LON-117.1611-2026"
+    },
+    {
+      "lat": 37.7749,
+      "lon": -122.4194,
+      "city": "San Francisco, CA",
+      "county_fips": "06075",
+      "pga_g": 0.6,
+      "sds": 1.12,
+      "sd1": 0.57,
+      "tier": "Very High",
+      "evidence_id": "PGA-LAT37.7749-LON-122.4194-2026"
+    },
+    {
+      "lat": 25.7617,
+      "lon": -80.1918,
+      "city": "Miami, FL",
+      "county_fips": "12086",
+      "pga_g": 0.022,
+      "sds": 0.034,
+      "sd1": 0.018,
+      "tier": "Low",
+      "evidence_id": "PGA-LAT25.7617-LON-80.1918-2026"
+    },
+    {
+      "lat": 25.8089,
+      "lon": -80.1235,
+      "city": "Miami Beach, FL",
+      "county_fips": "12086",
+      "pga_g": 0.022,
+      "sds": 0.033,
+      "sd1": 0.018,
+      "tier": "Low",
+      "evidence_id": "PGA-LAT25.8089-LON-80.1235-2026"
+    },
+    {
+      "lat": 27.9506,
+      "lon": -82.4572,
+      "city": "Tampa, FL",
+      "county_fips": "12057",
+      "pga_g": 0.031,
+      "sds": 0.047,
+      "sd1": 0.026,
+      "tier": "Low",
+      "evidence_id": "PGA-LAT27.9506-LON-82.4572-2026"
+    },
+    {
+      "lat": 30.3322,
+      "lon": -81.6557,
+      "city": "Jacksonville, FL",
+      "county_fips": "12031",
+      "pga_g": 0.068,
+      "sds": 0.11,
+      "sd1": 0.056,
+      "tier": "Low",
+      "evidence_id": "PGA-LAT30.3322-LON-81.6557-2026"
+    },
+    {
+      "lat": 28.5384,
+      "lon": -81.3789,
+      "city": "Orlando, FL",
+      "county_fips": "12095",
+      "pga_g": 0.038,
+      "sds": 0.059,
+      "sd1": 0.031,
+      "tier": "Low",
+      "evidence_id": "PGA-LAT28.5384-LON-81.3789-2026"
+    }
+  ]
+}

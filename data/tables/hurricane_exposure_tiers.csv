@@ -1,0 +1,12 @@
+state,county_fips,county_name,hurricane_tier,landfalls_within_75mi_since_1900,strongest_landfall_category,evidence_id,source_notes
+FL,12086,Miami-Dade County,Very High,28,5,HURDAT-MIAMI-DADE-1900-2025,Includes 1926 Great Miami CAT5 and Andrew 1992 CAT5 derived from NOAA HURDAT2
+FL,12011,Broward County,Very High,24,5,HURDAT-BROWARD-1900-2025,HURDAT2 best-track aggregation
+FL,12099,Palm Beach County,Very High,22,5,HURDAT-PALM-BEACH-1900-2025,HURDAT2 best-track aggregation
+FL,12057,Hillsborough County,High,15,3,HURDAT-HILLSBOROUGH-1900-2025,HURDAT2 best-track aggregation
+FL,12031,Duval County (Jacksonville),Moderate,8,3,HURDAT-DUVAL-1900-2025,HURDAT2 best-track aggregation
+FL,12095,Orange County (Orlando),Moderate,9,3,HURDAT-ORANGE-1900-2025,HURDAT2 best-track aggregation; inland modulation applied
+FL,12001,Alachua County (Gainesville),Low,5,2,HURDAT-ALACHUA-1900-2025,HURDAT2 best-track aggregation
+CA,06037,Los Angeles County,Low,0,0,HURDAT-CA-NA-2025,No hurricane-strength landfalls; PAC-basin storms downgrade before US coast
+CA,06073,San Diego County,Low,0,0,HURDAT-CA-NA-2025,No hurricane-strength landfalls
+CA,06075,San Francisco County,Low,0,0,HURDAT-CA-NA-2025,No hurricane-strength landfalls
+DEFAULT,DEFAULT,Unknown,Low,0,0,HURDAT-DEFAULT-2025,Fallback for non-FL non-Atlantic-coast counties

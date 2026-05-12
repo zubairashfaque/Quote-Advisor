@@ -1,0 +1,49 @@
+[project]
+name = "quote-advisor"
+version = "0.1.0"
+description = "Multi-agent home-insurance quote advisor with explicit orchestration, deterministic tools, and a per-agent LLM registry"
+requires-python = ">=3.11"
+readme = "README.md"
+authors = [{ name = "refocusai" }]
+
+dependencies = [
+    "langgraph>=0.2.50",
+    "langgraph-checkpoint-sqlite>=2.0.0",
+    "langchain>=0.3.0",
+    "langchain-core>=0.3.0",
+    "langchain-anthropic>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "langchain-community>=0.3.0",
+    "langchain-chroma>=0.1.4",
+    "langchain-huggingface>=0.1.0",
+    "anthropic>=0.39.0",
+    "openai>=1.50.0",
+    "chromadb>=0.5.0",
+    "sentence-transformers>=3.0.0",
+    "rank-bm25>=0.2.2",
+    "pydantic>=2.9.0",
+    "pydantic-settings>=2.5.0",
+    "rapidfuzz>=3.10.0",
+    "pandas>=2.2.0",
+    "pyyaml>=6.0.2",
+    "python-dotenv>=1.0.1",
+    "typer>=0.13.0",
+    "rich>=13.9.0",
+    "requests>=2.32.0",
+    "langsmith>=0.1.140",
+]
+
+[project.scripts]
+quote-advisor = "quote_advisor.cli:app"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [{ include = "quote_advisor", from = "src" }]
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.3,<10.0.0)"
+]

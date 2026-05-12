@@ -1,0 +1,93 @@
+/home/zubair-ashfaque/refocusai/.venv/lib/python3.13/site-packages/langgraph/checkpoint/serde/encrypted.py:5: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+     Resolved per-agent LLM assignments      
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃ Role                 ┃ Model              ┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│ CONFIDENCE_EXPLAINER │ openai:gpt-4o-mini │
+│ COUNCIL_ACTUARY      │ openai:gpt-4o      │
+│ COUNCIL_ADVOCATE     │ openai:gpt-4o      │
+│ COUNCIL_COMPLIANCE   │ openai:gpt-4o      │
+│ COUNCIL_UNDERWRITER  │ openai:gpt-4o      │
+│ COUNTERFACTUAL       │ openai:gpt-4o      │
+│ COVERAGE_EXECUTOR    │ openai:gpt-4o-mini │
+│ COVERAGE_PLANNER     │ openai:gpt-4o      │
+│ ELIGIBILITY_TRIAGE   │ openai:gpt-4o-mini │
+│ FOLLOWUP_EXPLAIN     │ openai:gpt-4o-mini │
+│ INTENT_CLASSIFIER    │ openai:gpt-4o-mini │
+│ PRICING_PLANNER      │ openai:gpt-4o      │
+│ PRICING_SOLVER       │ openai:gpt-4o      │
+│ RISK_AGENT           │ openai:gpt-4o      │
+│ STATUTORY_AGENT      │ openai:gpt-4o      │
+│ VALIDATOR            │ openai:gpt-4o      │
+└──────────────────────┴────────────────────┘
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s][A
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s][A[A
+
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s][A[A[ALoading weights:  59%|█████▉    | 117/199 [00:00<00:00, 1159.87it/s]
+Loading weights:  61%|██████▏   | 122/199 [00:00<00:00, 1207.12it/s][A
+
+Loading weights:  58%|█████▊    | 116/199 [00:00<00:00, 1146.79it/s][A[ALoading weights: 100%|██████████| 199/199 [00:00<00:00, 1225.28it/s]
+
+
+
+Loading weights:  58%|█████▊    | 115/199 [00:00<00:00, 1149.78it/s][A[A[ALoading weights: 100%|██████████| 199/199 [00:00<00:00, 1131.65it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1178.22it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1320.89it/s]
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7258.60it/s]
+/home/zubair-ashfaque/refocusai/.venv/lib/python3.13/site-packages/langchain_openai/chat_models/base.py:547: UserWarning: Invalid schema for OpenAI's structured output feature, which is the default method for `with_structured_output` as of langchain-openai==0.3. Specify `method="function_calling"` instead or update your schema. See supported schemas: https://platform.openai.com/docs/guides/structured-outputs#supported-schemas
+  warnings.warn(message)
+
+DecisionTrace
+DEC-001  IntentClassifier    Initial profile classified as new_quote (no 
+follow-up text).
+DEC-002  StatutoryAgent      ReAct agent fired 5 rule(s) (5 retrieval(s); 0 
+dropped by self-check). [FLDFS-CREDIT-01, FLDFS-HURR-DED-01, FLDFS-CGCC-01, 
+FLDFS-CGCC-01, FLDFS-WIND-MIT-01]
+DEC-003  EligibilityTriage   market_route=citizens: FL Citizens viability vs 
+hurricane tier Very High
+DEC-004  RiskAgent           Identified 3 risk factor(s). 
+[NFHL-12086C0312L-AE-2024, HURDAT-MIAMI-DADE-1900-2025, NRI-FL-12086-2025]
+DEC-005  CoverageAgent       Plan-and-Execute -> 10 coverage line(s). 
+[WIND-FORM-OIR-B1-1802-2026, RULE-FL-HURRICANE-DEDUCTIBLE, RCV-FL-331-2026, 
+III-HB-PRICING-01, FL-DED-5PCT, RULE-FL-WIND-MITIGATION, FL-DED-10PCT, 
+NAIC-CG-COVERAGE-01, FL-DED-2PCT, RULE-FL-CGCC-MANDATORY]
+DEC-006  PricingPlanner      ReWOO plan emitted with 8 tasks.
+DEC-007  PricingAgent        Premium range $5,850-$9,750; chain length 4. 
+[BENCH-FL-2026-III, MULT-SCALING-PER100K, MULT-CLAIMS-0, 
+MULT-CREDIT-NEUTRAL-FL626]
+DEC-008  Validator           Deterministic checks: 0 flag(s); 
+council_invoked=False.
+DEC-009  ConfidenceAggregator  confidence_overall=0.95 (council_invoked=False).
+
+Statutory agent · phase=agent · retrievals=5 · rules=5
+  1. corpus=fl_dfs jurisdiction=FL q='wind mitigation OIR-B1-1802' → 3 chunks 
+(FLDFS-WIND-MIT-01, FLDFS-WIND-MIT-01, FLDFS-WIND-MIT-01)
+  2. corpus=fl_dfs jurisdiction=FL q='hurricane deductible §627.701' → 3 chunks 
+(FLDFS-HURR-DED-01, FLDFS-HURR-DED-01, FLDFS-HURR-DED-01)
+  3. corpus=fl_dfs jurisdiction=FL q='CGCC §627.706' → 3 chunks (FLDFS-CGCC-01, 
+FLDFS-CGCC-01, FLDFS-WIND-MIT-01)
+  4. corpus=fl_dfs jurisdiction=FL q='credit-neutral §626.9741' → 3 chunks 
+(FLDFS-CREDIT-01, FLDFS-CREDIT-01, FLDFS-CREDIT-01)
+  5. corpus=fl_dfs jurisdiction=FL q='sinkhole §627.706(2)' → 3 chunks 
+(FLDFS-CGCC-01, FLDFS-CGCC-01, FLDFS-CGCC-01)
+
+Confidence breakdown: overall=0.95 risk=1.0 coverage=0.9 pricing=1.0 
+grounding=1.0 council_invoked=False council_verdict=None 
+rationale_summary='Strong grounding and pricing scores are driving confidence 
+up, with no statutory violations noted. The Florida no-credit treatment is a 
+statutory protection, ensuring compliance. To further enhance confidence, 
+maintaining high scores across all dimensions will be key.'
+
+Confidence rationale (LLM):
+  Strong grounding and pricing scores are driving confidence up, with no 
+statutory violations noted. The Florida no-credit treatment is a statutory 
+protection, ensuring compliance. To further enhance confidence, maintaining high
+scores across all dimensions will be key.
+
+LangSmith trace: 
+https://smith.langchain.com/projects/refocusai/traces?metadata=thread_id:demo-b
+Tip: filter LangSmith by metadata.thread_id == 'demo-b' to scope to this run.

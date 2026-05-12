@@ -1,0 +1,11 @@
+poetry run python -m quote_advisor.rag.ingest
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9332.56it/s]
+[ingest] naic_consumer_guide: indexed 8 chunks from 3 file(s).
+[ingest] ca_doi: indexed 12 chunks from 4 file(s).
+[ingest] fl_dfs: indexed 13 chunks from 4 file(s).
+[ingest] fema_p312: indexed 9 chunks from 3 file(s).
+[ingest] calfire_defensible: indexed 12 chunks from 3 file(s).
+[ingest] iii_handbook: indexed 11 chunks from 3 file(s).
+[ingest] gse_lender: indexed 3 chunks from 1 file(s).
+
+[ingest] done; 68 chunks across 7 corpora at /home/zubair-ashfaque/refocusai/.chromadb

@@ -1,0 +1,13 @@
+# synthetic_fallback: true
+# fetched_at: 2026-05-11T19:36:05.853268+00:00
+# source: curated public-knowledge values; see data/REAL_DATA_PROVENANCE.md
+# note: live FEMA NRI fetch failed; this snapshot is anchored on real published values
+county_fips,state,county_name,overall_score,overall_tier,eal_total_usd,eal_wildfire_usd,eal_hurricane_usd,eal_earthquake_usd,eal_flood_usd,evidence_id
+06037,CA,Los Angeles County,99.94,Very High,1819000000,182000000,0,512000000,98000000,NRI-CA-06037-2025
+06073,CA,San Diego County,87.3,Relatively High,412000000,49000000,0,98000000,28000000,NRI-CA-06073-2025
+06059,CA,Orange County,82.1,Relatively High,318000000,21000000,0,142000000,18000000,NRI-CA-06059-2025
+06065,CA,Riverside County,78.4,Relatively High,287000000,68000000,0,71000000,12000000,NRI-CA-06065-2025
+12086,FL,Miami-Dade County,96.18,Very High,1281000000,0,742000000,2000000,118000000,NRI-FL-12086-2025
+12011,FL,Broward County,89.42,Relatively High,612000000,0,401000000,1000000,82000000,NRI-FL-12011-2025
+12099,FL,Palm Beach County,84.71,Relatively High,471000000,0,318000000,1000000,54000000,NRI-FL-12099-2025
+12057,FL,Hillsborough County,82.95,Relatively High,389000000,0,221000000,1000000,67000000,NRI-FL-12057-2025

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IntentClassifier short-circuit · Profile A">
+<style><![CDATA[
+svg { background: #0a0d12; font-family: 'Inter', system-ui, sans-serif; }
+:root {
+  --bg:#0b0e14; --bg-2:#11151f; --bg-3:#171c28;
+  --ink:#e8e6e0; --ink-2:#b9b6ac; --ink-3:#7b7868;
+  --rule:#2a3042; --rule-2:#1c2030;
+  --amber:#f5a623; --amber-2:#e89110;
+  --cyan:#4dd4ac; --rose:#ff6b9d; --violet:#a07aff;
+  --blue:#5fb3ff; --red:#ff7676;
+  --display:'Fraunces',serif;
+  --serif:'Source Serif 4',Georgia,serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+.svg-box-label{font-family:'JetBrains Mono',monospace;font-size:11px;fill:#e8e6e0;font-weight:500}
+.svg-box-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.1em;font-weight:500}
+.svg-box-sub{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.08em}
+.svg-lane-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;fill:#7b7868;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-title{font-family:'Fraunces',serif;font-size:13px;fill:#e8e6e0;font-style:italic}
+.svg-rail-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#b9b6ac;letter-spacing:.08em}
+.svg-arrow{stroke:#7b7868;stroke-width:1.3;fill:none}
+.svg-arrow.amber{stroke:#f5a623}
+.svg-arrow.cyan{stroke:#4dd4ac}
+.svg-arrow.violet{stroke:#a07aff}
+.svg-arrow.rose{stroke:#ff6b9d}
+.svg-arrow.blue{stroke:#5fb3ff}
+.svg-arrow.red{stroke:#ff7676}
+.svg-arrow.dashed{stroke-dasharray:4 3;opacity:.7}
+.svg-box-fill-bg{fill:#171c28}
+.svg-box-fill-bg-2{fill:#11151f}
+.svg-pill{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#e8e6e0;letter-spacing:.04em}
+.svg-pill-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-result-num{font-family:'JetBrains Mono',monospace;font-size:14px;fill:#f5a623;font-weight:500}
+.svg-result-label{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.1em;text-transform:uppercase}
+.svg-step-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-key-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#e8e6e0}
+.svg-val-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#4dd4ac}
+.svg-cite{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.05em}
+.svg-strike{fill:#7b7868;text-decoration:line-through}
+.svg-winner-glow{filter:drop-shadow(0 0 6px rgba(245,166,35,.45))}
+]]></style>
+  <defs>
+    <marker id="we3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a07aff"/></marker>
+  </defs>
+  <!-- Input -->
+  <text x="20" y="20" class="svg-step-num">▸ STEP 1 · CLI INPUT</text>
+  <rect x="20" y="30" width="780" height="56" rx="5" fill="#11151f" stroke="#7b7868" stroke-width="0.8"/>
+  <text x="34" y="50" class="svg-key-text">raw_profile =</text>
+  <text x="142" y="50" class="svg-val-text">Profile A (CA, $900K, credit=700, pool, 1 claim)</text>
+  <text x="34" y="68" class="svg-key-text">followup_question =</text>
+  <text x="180" y="68" class="svg-val-text">None</text>
+  <line x1="410" y1="90" x2="410" y2="112" class="svg-arrow violet" marker-end="url(#we3-arrow)"/>
+
+  <!-- Decision -->
+  <text x="20" y="124" class="svg-step-num" fill="#a07aff">▸ STEP 2 · DECISION (bypass — no LLM call)</text>
+  <rect x="20" y="134" width="780" height="68" rx="5" fill="url(#violet-fill)" stroke="#a07aff" stroke-width="1"/>
+  <text x="34" y="156" class="svg-key-text">Condition checked:</text>
+  <text x="180" y="156" class="svg-val-text">raw_profile is present AND followup_question is None</text>
+  <text x="34" y="176" class="svg-key-text">Bypass triggers →</text>
+  <text x="162" y="176" class="svg-val-text" fill="#f5a623">intent = NEW_QUOTE</text>
+  <text x="34" y="192" class="svg-cite">Self-Ask 4-binary decomposition NOT invoked · saves 1 LLM call</text>
+  <line x1="410" y1="206" x2="410" y2="228" class="svg-arrow violet" marker-end="url(#we3-arrow)"/>
+
+  <!-- Output -->
+  <text x="20" y="240" class="svg-step-num">▸ STEP 3 · WRITE TO GRAPHSTATE</text>
+  <rect x="20" y="250" width="780" height="56" rx="5" fill="url(#amber-fill)" stroke="#f5a623" stroke-width="1.2"/>
+  <text x="34" y="272" class="svg-key-text">state["intent"] =</text>
+  <text x="170" y="272" class="svg-val-text">"NEW_QUOTE"</text>
+  <text x="290" y="272" class="svg-cite">→ routes to StatutoryAgent (the gate)</text>
+  <text x="34" y="290" class="svg-key-text">decision_trace[0] =</text>
+  <text x="180" y="290" class="svg-val-text">DEC-001 IntentClassifier</text>
+  <text x="350" y="290" class="svg-cite">_reset_trace = True · fresh thread</text>
+</svg>

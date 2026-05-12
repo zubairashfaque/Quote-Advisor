@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 820 580" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Confidence aggregator breakdown · Profile A">
+<style><![CDATA[
+svg { background: #0a0d12; font-family: 'Inter', system-ui, sans-serif; }
+:root {
+  --bg:#0b0e14; --bg-2:#11151f; --bg-3:#171c28;
+  --ink:#e8e6e0; --ink-2:#b9b6ac; --ink-3:#7b7868;
+  --rule:#2a3042; --rule-2:#1c2030;
+  --amber:#f5a623; --amber-2:#e89110;
+  --cyan:#4dd4ac; --rose:#ff6b9d; --violet:#a07aff;
+  --blue:#5fb3ff; --red:#ff7676;
+  --display:'Fraunces',serif;
+  --serif:'Source Serif 4',Georgia,serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+.svg-box-label{font-family:'JetBrains Mono',monospace;font-size:11px;fill:#e8e6e0;font-weight:500}
+.svg-box-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.1em;font-weight:500}
+.svg-box-sub{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.08em}
+.svg-lane-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;fill:#7b7868;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-title{font-family:'Fraunces',serif;font-size:13px;fill:#e8e6e0;font-style:italic}
+.svg-rail-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#b9b6ac;letter-spacing:.08em}
+.svg-arrow{stroke:#7b7868;stroke-width:1.3;fill:none}
+.svg-arrow.amber{stroke:#f5a623}
+.svg-arrow.cyan{stroke:#4dd4ac}
+.svg-arrow.violet{stroke:#a07aff}
+.svg-arrow.rose{stroke:#ff6b9d}
+.svg-arrow.blue{stroke:#5fb3ff}
+.svg-arrow.red{stroke:#ff7676}
+.svg-arrow.dashed{stroke-dasharray:4 3;opacity:.7}
+.svg-box-fill-bg{fill:#171c28}
+.svg-box-fill-bg-2{fill:#11151f}
+.svg-pill{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#e8e6e0;letter-spacing:.04em}
+.svg-pill-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-result-num{font-family:'JetBrains Mono',monospace;font-size:14px;fill:#f5a623;font-weight:500}
+.svg-result-label{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.1em;text-transform:uppercase}
+.svg-step-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-key-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#e8e6e0}
+.svg-val-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#4dd4ac}
+.svg-cite{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.05em}
+.svg-strike{fill:#7b7868;text-decoration:line-through}
+.svg-winner-glow{filter:drop-shadow(0 0 6px rgba(245,166,35,.45))}
+]]></style>
+  <!-- Header -->
+  <text x="20" y="20" class="svg-step-num" fill="#4dd4ac">▸ DETERMINISTIC AGGREGATOR · Σ (signal × weight) — v1.0 ships 4 of these 8 signals (see <a href="#future-enhancements">§17</a>)</text>
+  <rect x="20" y="30" width="780" height="320" rx="5" fill="url(#cyan-fill)" stroke="#4dd4ac" stroke-width="0.8"/>
+  <!-- column headers -->
+  <text x="34" y="50" class="svg-cite" fill="#f5a623">SIGNAL</text>
+  <text x="280" y="50" class="svg-cite" fill="#f5a623">SUB-SCORE</text>
+  <text x="380" y="50" class="svg-cite" fill="#f5a623">WEIGHT</text>
+  <text x="460" y="50" class="svg-cite" fill="#f5a623">BAR · 0.0 ───────────────── 1.0</text>
+  <text x="720" y="50" class="svg-cite" fill="#f5a623">CONTRIB</text>
+  <line x1="34" y1="56" x2="785" y2="56" stroke="#2a3042" stroke-width="0.7"/>
+
+  <!-- Each signal as a row with horizontal bar -->
+  <!-- 1 grounding_score -->
+  <text x="34" y="78" class="svg-key-text">grounding_score</text>
+  <text x="280" y="78" class="svg-val-text">1.00</text>
+  <text x="380" y="78" class="svg-pill">0.15</text>
+  <rect x="460" y="68" width="240" height="12" rx="2" fill="#0a0d12" stroke="#7b7868" stroke-width="0.5"/>
+  <rect x="460" y="68" width="240" height="12" rx="2" fill="#4dd4ac" opacity="0.7"/>
+  <text x="720" y="78" class="svg-val-text" fill="#f5a623">0.150</text>
+
+  <!-- 2 multiplier_coverage -->
+  <text x="34" y="100" class="svg-key-text">multiplier_coverage</text>
+  <text x="280" y="100" class="svg-val-text">1.00</text>
+  <text x="380" y="100" class="svg-pill">0.10</text>
+  <rect x="460" y="90" width="240" height="12" rx="2" fill="#0a0d12" stroke="#7b7868" stroke-width="0.5"/>
+  <rect x="460" y="90" width="240" height="12" rx="2" fill="#4dd4ac" opacity="0.7"/>
+  <text x="720" y="100" class="svg-val-text" fill="#f5a623">0.100</text>
+
+  <!-- 3 statutory_compliance -->
+  <text x="34" y="122" class="svg-key-text">statutory_compliance</text>
+  <text x="280" y="122" class="svg-val-text">1.00</text>
+  <text x="380" y="122" class="svg-pill">0.20</text>
+  <rect x="460" y="112" width="240" height="12" rx="2" fill="#0a0d12" stroke="#7b7868" stroke-width="0.5"/>
+  <rect x="460" y="112" width="240" height="12" rx="2" fill="#4dd4ac" opacity="0.7"/>
+  <text x="720" y="122" class="svg-val-text" fill="#f5a623">0.200</text>
+
+  <!-- 4 cohort_agreement -->
+  <text x="34" y="144" class="svg-key-text">cohort_agreement</text>
+  <text x="280" y="144" class="svg-val-text" fill="#ff7676">0.70</text>
+  <text x="380" y="144" class="svg-pill">0.15</text>
+  <rect x="460" y="134" width="240" height="12" rx="2" fill="#0a0d12" stroke="#7b7868" stroke-width="0.5"/>
+  <rect x="460" y="134" width="168" height="12" rx="2" fill="#ff7676" opacity="0.7"/>
+  <text x="720" y="144" class="svg-val-text" fill="#f5a623">0.105</text>
+  <text x="34" y="158" class="svg-cite" fill="#ff7676">↳ outlier above p90 (slightly) — sub-score docked from 1.0</text>
+
+  <!-- 5 council_outcome -->
+  <text x="34" y="180" class="svg-key-text">council_outcome</text>
+  <text x="280" y="180" class="svg-val-text">1.00</text>
+  <text x="380" y="180" class="svg-pill">0.10</text>
+  <rect x="460" y="170" width="240" height="12" rx="2" fill="#0a0d12" stroke="#7b7868" stroke-width="0.5"/>
+  <rect x="460" y="170" width="240" height="12" rx="2" fill="#4dd4ac" opacity="0.7"/>
+  <text x="720" y="180" class="svg-val-text" fill="#f5a623">0.100</text>
+  <text x="34" y="194" class="svg-cite">↳ Council not VETOed (it was invoked, confirmed)</text>
+
+  <!-- 6 validator_passes -->
+  <text x="34" y="216" class="svg-key-text">validator_passes</text>
+  <text x="280" y="216" class="svg-val-text" fill="#ff7676">0.75</text>
+  <text x="380" y="216" class="svg-pill">0.15</text>
+  <rect x="460" y="206" width="240" height="12" rx="2" fill="#0a0d12" stroke="#7b7868" stroke-width="0.5"/>
+  <rect x="460" y="206" width="180" height="12" rx="2" fill="#ff7676" opacity="0.7"/>
+  <text x="720" y="216" class="svg-val-text" fill="#f5a623">0.113</text>
+  <text x="34" y="230" class="svg-cite" fill="#ff7676">↳ 3 of 4 hard checks passed · outlier check failed</text>
+
+  <!-- 7 profile_completeness -->
+  <text x="34" y="252" class="svg-key-text">profile_completeness</text>
+  <text x="280" y="252" class="svg-val-text">1.00</text>
+  <text x="380" y="252" class="svg-pill">0.10</text>
+  <rect x="460" y="242" width="240" height="12" rx="2" fill="#0a0d12" stroke="#7b7868" stroke-width="0.5"/>
+  <rect x="460" y="242" width="240" height="12" rx="2" fill="#4dd4ac" opacity="0.7"/>
+  <text x="720" y="252" class="svg-val-text" fill="#f5a623">0.100</text>
+
+  <!-- 8 rag_quality -->
+  <text x="34" y="274" class="svg-key-text">rag_quality</text>
+  <text x="280" y="274" class="svg-val-text">1.00</text>
+  <text x="380" y="274" class="svg-pill">0.05</text>
+  <rect x="460" y="264" width="240" height="12" rx="2" fill="#0a0d12" stroke="#7b7868" stroke-width="0.5"/>
+  <rect x="460" y="264" width="240" height="12" rx="2" fill="#4dd4ac" opacity="0.7"/>
+  <text x="720" y="274" class="svg-val-text" fill="#f5a623">0.050</text>
+
+  <!-- raw sum row -->
+  <line x1="34" y1="288" x2="785" y2="288" stroke="#2a3042" stroke-width="0.7"/>
+  <text x="34" y="306" class="svg-pill" fill="#b9b6ac">RAW SUM (uncapped)</text>
+  <text x="720" y="306" class="svg-result-num" font-size="13">0.918</text>
+  <text x="34" y="324" class="svg-cite">Σ (1.00×0.15 + 1.00×0.10 + 1.00×0.20 + 0.70×0.15 + 1.00×0.10 + 0.75×0.15 + 1.00×0.10 + 1.00×0.05) = 0.918</text>
+  <text x="34" y="340" class="svg-cite">All weights sum to 1.00 · raw sum bounded to [0.0, 1.0]</text>
+
+  <!-- Hard caps -->
+  <text x="20" y="372" class="svg-step-num" fill="#f5a623">▸ HARD CAPS (LLM cannot override)</text>
+  <rect x="20" y="382" width="780" height="56" rx="5" fill="url(#amber-fill)" stroke="#f5a623" stroke-width="1.2"/>
+  <text x="34" y="404" class="svg-key-text">cohort outlier above p90 →</text>
+  <text x="240" y="404" class="svg-val-text" fill="#f5a623">cap at 0.85</text>
+  <text x="340" y="404" class="svg-pill" fill="#ff7676">★ FIRES</text>
+  <text x="430" y="404" class="svg-cite">0.918 raw exceeds 0.85 cap → confidence floored at cap</text>
+  <text x="34" y="422" class="svg-cite">Other caps not fired here: statutory non-compliance (0.5) · refer_to_human (0.5)</text>
+
+  <!-- Final score -->
+  <rect x="20" y="450" width="780" height="42" rx="5" fill="#0a0d12" stroke="#f5a623" stroke-width="2"/>
+  <text x="34" y="476" class="svg-pill" fill="#b9b6ac">FINAL confidence_score =</text>
+  <text x="220" y="478" class="svg-result-num" font-size="20">0.85</text>
+  <text x="320" y="476" class="svg-cite" fill="#f5a623">capped from raw 0.918 by cohort-outlier hard cap</text>
+
+  <!-- LLM rationale -->
+  <text x="20" y="514" class="svg-step-num" fill="#a07aff">▸ DEC-0012 AUGMENTATIVE LLM RATIONALE (prose only · cannot change number)</text>
+  <rect x="20" y="524" width="780" height="50" rx="5" fill="url(#violet-fill)" stroke="#a07aff" stroke-width="0.8"/>
+  <text x="34" y="544" class="svg-cite">"Strong grounding (every multiplier carries an evidence_id) and full statutory compliance push confidence up, but the premium</text>
+  <text x="34" y="558" class="svg-cite">falls above the cohort 90th percentile for $750-1000K CA homes at moderate wildfire risk. The 0.85 cap reflects that distance."</text>
+</svg>

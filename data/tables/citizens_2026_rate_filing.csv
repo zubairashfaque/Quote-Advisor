@@ -1,0 +1,11 @@
+state,county_fips,county_name,coastal_distance_band,hurricane_tier,base_actuarial_per_1000_cov_a,evidence_id
+FL,12086,Miami-Dade County,coastal_0_5mi,Very High,18.20,CIT-T201-12086-2026
+FL,12086,Miami-Dade County,5_to_15mi,High,12.45,CIT-T202-12086-2026
+FL,12086,Miami-Dade County,inland_15plus,Moderate,8.10,CIT-T203-12086-2026
+FL,12011,Broward County,coastal_0_5mi,Very High,16.80,CIT-T201-12011-2026
+FL,12011,Broward County,5_to_15mi,High,11.20,CIT-T202-12011-2026
+FL,12099,Palm Beach County,coastal_0_5mi,Very High,15.40,CIT-T201-12099-2026
+FL,12099,Palm Beach County,5_to_15mi,High,10.30,CIT-T202-12099-2026
+FL,12099,Palm Beach County,inland_15plus,Moderate,7.40,CIT-T203-12099-2026
+FL,12057,Hillsborough County,coastal_0_5mi,High,11.80,CIT-T201-12057-2026
+FL,12057,Hillsborough County,inland_15plus,Moderate,6.90,CIT-T203-12057-2026

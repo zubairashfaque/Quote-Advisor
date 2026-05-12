@@ -1,0 +1,18 @@
+# Copy to llm_roles.local.yaml and override any role-to-model mapping for your environment.
+# llm_roles.local.yaml is git-ignored.
+# Example: route every agent to Anthropic for an A/B run (the default config uses OpenAI).
+#
+# INTENT_CLASSIFIER:    anthropic:claude-haiku-4-5
+# ELIGIBILITY_TRIAGE:   anthropic:claude-haiku-4-5
+# RISK_AGENT:           anthropic:claude-sonnet-4-6
+# COVERAGE_PLANNER:     anthropic:claude-sonnet-4-6
+# COVERAGE_EXECUTOR:    anthropic:claude-haiku-4-5
+# PRICING_PLANNER:      anthropic:claude-sonnet-4-6
+# PRICING_SOLVER:       anthropic:claude-sonnet-4-6
+# VALIDATOR:            anthropic:claude-sonnet-4-6
+# COUNCIL_UNDERWRITER:  anthropic:claude-sonnet-4-6
+# COUNCIL_ADVOCATE:     anthropic:claude-sonnet-4-6
+# COUNCIL_ACTUARY:      anthropic:claude-sonnet-4-6
+# COUNCIL_COMPLIANCE:   anthropic:claude-sonnet-4-6
+# COUNTERFACTUAL:       anthropic:claude-sonnet-4-6
+# FOLLOWUP_EXPLAIN:     anthropic:claude-haiku-4-5

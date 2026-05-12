@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipeline order showing EligibilityTriage at position 3 as a gate before the counterfactual fork zone">
+<style><![CDATA[
+svg { background: #0a0d12; font-family: 'Inter', system-ui, sans-serif; }
+:root {
+  --bg:#0b0e14; --bg-2:#11151f; --bg-3:#171c28;
+  --ink:#e8e6e0; --ink-2:#b9b6ac; --ink-3:#7b7868;
+  --rule:#2a3042; --rule-2:#1c2030;
+  --amber:#f5a623; --amber-2:#e89110;
+  --cyan:#4dd4ac; --rose:#ff6b9d; --violet:#a07aff;
+  --blue:#5fb3ff; --red:#ff7676;
+  --display:'Fraunces',serif;
+  --serif:'Source Serif 4',Georgia,serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+.svg-box-label{font-family:'JetBrains Mono',monospace;font-size:11px;fill:#e8e6e0;font-weight:500}
+.svg-box-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.1em;font-weight:500}
+.svg-box-sub{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.08em}
+.svg-lane-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;fill:#7b7868;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-title{font-family:'Fraunces',serif;font-size:13px;fill:#e8e6e0;font-style:italic}
+.svg-rail-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#b9b6ac;letter-spacing:.08em}
+.svg-arrow{stroke:#7b7868;stroke-width:1.3;fill:none}
+.svg-arrow.amber{stroke:#f5a623}
+.svg-arrow.cyan{stroke:#4dd4ac}
+.svg-arrow.violet{stroke:#a07aff}
+.svg-arrow.rose{stroke:#ff6b9d}
+.svg-arrow.blue{stroke:#5fb3ff}
+.svg-arrow.red{stroke:#ff7676}
+.svg-arrow.dashed{stroke-dasharray:4 3;opacity:.7}
+.svg-box-fill-bg{fill:#171c28}
+.svg-box-fill-bg-2{fill:#11151f}
+.svg-pill{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#e8e6e0;letter-spacing:.04em}
+.svg-pill-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-result-num{font-family:'JetBrains Mono',monospace;font-size:14px;fill:#f5a623;font-weight:500}
+.svg-result-label{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.1em;text-transform:uppercase}
+.svg-step-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-key-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#e8e6e0}
+.svg-val-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#4dd4ac}
+.svg-cite{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.05em}
+.svg-strike{fill:#7b7868;text-decoration:line-through}
+.svg-winner-glow{filter:drop-shadow(0 0 6px rgba(245,166,35,.45))}
+]]></style>
+
+  <!-- Counterfactual fork zone (dashed amber rectangle around Risk/Coverage/Pricing) -->
+  <rect x="406" y="42" width="288" height="78" rx="5" stroke="#f5a623" stroke-width="1" fill="none" stroke-dasharray="4 3" opacity="0.55"/>
+  <text x="550" y="34" class="svg-tiny" text-anchor="middle" fill="#f5a623">COUNTERFACTUAL FORK ZONE (DEC-0010) — only these 3 re-run on mutation</text>
+
+  <!-- Pipeline boxes -->
+  <!-- 01 Profile -->
+  <rect x="20" y="50" width="80" height="58" rx="3" fill="#11151f" stroke="#7b7868"/>
+  <text x="60" y="68" class="svg-box-num" text-anchor="middle">01</text>
+  <text x="60" y="88" class="svg-box-label" text-anchor="middle">Profile</text>
+
+  <!-- 02 Intent -->
+  <rect x="118" y="50" width="80" height="58" rx="3" fill="#11151f" stroke="#7b7868"/>
+  <text x="158" y="68" class="svg-box-num" text-anchor="middle">02</text>
+  <text x="158" y="88" class="svg-box-label" text-anchor="middle">Intent</text>
+
+  <!-- 03 Statutory (LAW) -->
+  <rect x="216" y="50" width="80" height="58" rx="3" fill="#11151f" stroke="#ff7676"/>
+  <text x="256" y="68" class="svg-box-num" text-anchor="middle" fill="#ff7676">03</text>
+  <text x="256" y="84" class="svg-box-label" text-anchor="middle">Statutory</text>
+  <text x="256" y="100" class="svg-box-sub" text-anchor="middle" fill="#ff7676">LAW</text>
+
+  <!-- 04 Eligibility (GATE - HIGHLIGHTED) -->
+  <rect x="314" y="48" width="80" height="62" rx="3" fill="rgba(255,107,157,0.14)" stroke="#ff6b9d" stroke-width="2"/>
+  <text x="354" y="68" class="svg-box-num" text-anchor="middle" fill="#ff6b9d">04</text>
+  <text x="354" y="84" class="svg-box-label" text-anchor="middle" fill="#ffd4e3">Eligibility</text>
+  <text x="354" y="100" class="svg-box-sub" text-anchor="middle" fill="#ff6b9d">GATE</text>
+
+  <!-- 05 Risk -->
+  <rect x="412" y="50" width="80" height="58" rx="3" fill="#11151f" stroke="#f5a623"/>
+  <text x="452" y="68" class="svg-box-num" text-anchor="middle" fill="#f5a623">05</text>
+  <text x="452" y="88" class="svg-box-label" text-anchor="middle">Risk</text>
+
+  <!-- 06 Coverage -->
+  <rect x="510" y="50" width="80" height="58" rx="3" fill="#11151f" stroke="#a07aff"/>
+  <text x="550" y="68" class="svg-box-num" text-anchor="middle" fill="#a07aff">06</text>
+  <text x="550" y="88" class="svg-box-label" text-anchor="middle">Coverage</text>
+
+  <!-- 07 Pricing -->
+  <rect x="608" y="50" width="80" height="58" rx="3" fill="#11151f" stroke="#a07aff"/>
+  <text x="648" y="68" class="svg-box-num" text-anchor="middle" fill="#a07aff">07</text>
+  <text x="648" y="88" class="svg-box-label" text-anchor="middle">Pricing</text>
+
+  <!-- 08 Validator -->
+  <rect x="706" y="50" width="80" height="58" rx="3" fill="#11151f" stroke="#5fb3ff"/>
+  <text x="746" y="68" class="svg-box-num" text-anchor="middle" fill="#5fb3ff">08</text>
+  <text x="746" y="88" class="svg-box-label" text-anchor="middle">Validator</text>
+
+  <!-- 09 Council -->
+  <rect x="804" y="50" width="80" height="58" rx="3" fill="#11151f" stroke="#5fb3ff"/>
+  <text x="844" y="68" class="svg-box-num" text-anchor="middle" fill="#5fb3ff">09</text>
+  <text x="844" y="88" class="svg-box-label" text-anchor="middle">Council</text>
+
+  <!-- Chevrons between boxes -->
+  <g class="svg-arrow" stroke="#7b7868" stroke-width="1" fill="none">
+    <path d="M 100 79 L 116 79 M 113 76 L 116 79 L 113 82"/>
+    <path d="M 198 79 L 214 79 M 211 76 L 214 79 L 211 82"/>
+    <path d="M 296 79 L 312 79 M 309 76 L 312 79 L 309 82"/>
+    <path d="M 394 79 L 410 79 M 407 76 L 410 79 L 407 82"/>
+    <path d="M 492 79 L 508 79 M 505 76 L 508 79 L 505 82"/>
+    <path d="M 590 79 L 606 79 M 603 76 L 606 79 L 603 82"/>
+    <path d="M 688 79 L 704 79 M 701 76 L 704 79 L 701 82"/>
+    <path d="M 786 79 L 802 79 M 799 76 L 802 79 L 799 82"/>
+  </g>
+
+  <!-- Big arrow pointing up at the Eligibility box -->
+  <g stroke="#ff6b9d" stroke-width="1.5" fill="none">
+    <path d="M 354 148 L 354 116 M 350 121 L 354 116 L 358 121"/>
+  </g>
+
+  <!-- GATE label cluster -->
+  <text x="354" y="166" text-anchor="middle" fill="#ff6b9d" font-family="'JetBrains Mono',monospace" font-size="11" font-weight="600">GATE — must be HERE</text>
+  <text x="354" y="184" class="svg-box-sub" text-anchor="middle" fill="#b9b6ac">picks: admitted · FAIR_DIC · citizens · surplus_lines</text>
+  <text x="354" y="201" class="svg-tiny" text-anchor="middle">inputs: state · location · home_value · StatutoryAgent's rules + hints</text>
+
+  <!-- Bottom legend -->
+  <text x="450" y="226" class="svg-tiny" text-anchor="middle" fill="#7b7868">Pipeline reads left → right. Each downstream agent (Risk, Coverage, Pricing) NEEDS Eligibility's market_route to do its job correctly.</text>
+</svg>

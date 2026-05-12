@@ -1,0 +1,8 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "quote_advisor": "./src/quote_advisor/graph.py:graph",
+    "indexer": "./src/quote_advisor/rag/ingest.py:graph"
+  },
+  "env": ".env"
+}

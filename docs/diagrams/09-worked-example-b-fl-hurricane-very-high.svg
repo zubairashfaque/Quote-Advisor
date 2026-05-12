@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 820 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EligibilityTriage B · FL scoring">
+<style><![CDATA[
+svg { background: #0a0d12; font-family: 'Inter', system-ui, sans-serif; }
+:root {
+  --bg:#0b0e14; --bg-2:#11151f; --bg-3:#171c28;
+  --ink:#e8e6e0; --ink-2:#b9b6ac; --ink-3:#7b7868;
+  --rule:#2a3042; --rule-2:#1c2030;
+  --amber:#f5a623; --amber-2:#e89110;
+  --cyan:#4dd4ac; --rose:#ff6b9d; --violet:#a07aff;
+  --blue:#5fb3ff; --red:#ff7676;
+  --display:'Fraunces',serif;
+  --serif:'Source Serif 4',Georgia,serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+.svg-box-label{font-family:'JetBrains Mono',monospace;font-size:11px;fill:#e8e6e0;font-weight:500}
+.svg-box-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.1em;font-weight:500}
+.svg-box-sub{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.08em}
+.svg-lane-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;fill:#7b7868;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-title{font-family:'Fraunces',serif;font-size:13px;fill:#e8e6e0;font-style:italic}
+.svg-rail-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#b9b6ac;letter-spacing:.08em}
+.svg-arrow{stroke:#7b7868;stroke-width:1.3;fill:none}
+.svg-arrow.amber{stroke:#f5a623}
+.svg-arrow.cyan{stroke:#4dd4ac}
+.svg-arrow.violet{stroke:#a07aff}
+.svg-arrow.rose{stroke:#ff6b9d}
+.svg-arrow.blue{stroke:#5fb3ff}
+.svg-arrow.red{stroke:#ff7676}
+.svg-arrow.dashed{stroke-dasharray:4 3;opacity:.7}
+.svg-box-fill-bg{fill:#171c28}
+.svg-box-fill-bg-2{fill:#11151f}
+.svg-pill{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#e8e6e0;letter-spacing:.04em}
+.svg-pill-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-result-num{font-family:'JetBrains Mono',monospace;font-size:14px;fill:#f5a623;font-weight:500}
+.svg-result-label{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.1em;text-transform:uppercase}
+.svg-step-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-key-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#e8e6e0}
+.svg-val-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#4dd4ac}
+.svg-cite{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.05em}
+.svg-strike{fill:#7b7868;text-decoration:line-through}
+.svg-winner-glow{filter:drop-shadow(0 0 6px rgba(245,166,35,.45))}
+]]></style>
+  <text x="20" y="20" class="svg-step-num">▸ STEP 1 · GENERATE 4 BRANCHES · STEP 2 · SCORE · STEP 3 · PRUNE · STEP 4 · ARGMAX</text>
+
+  <!-- 4 candidate boxes -->
+  <!-- ADMITTED -->
+  <rect x="20" y="40" width="190" height="120" rx="6" fill="url(#amber-fill)" stroke="#f5a623" stroke-width="1"/>
+  <text x="34" y="62" class="svg-key-text" fill="#f5a623">ADMITTED</text>
+  <text x="34" y="86" class="svg-result-num" fill="#f5a623">0.55</text>
+  <text x="100" y="86" class="svg-pill">survives</text>
+  <text x="34" y="108" class="svg-cite">Hurricane VH →</text>
+  <text x="34" y="122" class="svg-cite">admitted strained</text>
+  <text x="34" y="136" class="svg-cite">but possible.</text>
+
+  <!-- CITIZENS (winner) -->
+  <g class="svg-winner-glow">
+    <rect x="220" y="40" width="190" height="120" rx="6" fill="url(#violet-fill)" stroke="#a07aff" stroke-width="1.6"/>
+    <text x="234" y="62" class="svg-key-text" fill="#a07aff">CITIZENS</text>
+    <text x="396" y="62" text-anchor="end" class="svg-pill" fill="#f5a623">★ WINNER</text>
+    <text x="234" y="86" class="svg-result-num" fill="#a07aff">0.65</text>
+    <text x="300" y="86" class="svg-pill">survives</text>
+    <text x="234" y="108" class="svg-cite">Hurricane VH →</text>
+    <text x="234" y="122" class="svg-cite">Citizens' core</text>
+    <text x="234" y="136" class="svg-cite">statutory mission.</text>
+    <text x="234" y="152" class="svg-pill-tiny" fill="#a07aff">▸ argmax(0.55, 0.65, 0.45)</text>
+  </g>
+
+  <!-- FAIR_DIC (pruned) -->
+  <rect x="420" y="40" width="190" height="120" rx="6" fill="#0a0d12" stroke="#7b7868" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="434" y="62" class="svg-key-text" fill="#7b7868">FAIR_DIC</text>
+  <text x="606" y="62" text-anchor="end" class="svg-pill-tiny" fill="#ff7676">✗ PRUNED</text>
+  <text x="434" y="86" class="svg-result-num" fill="#7b7868">0.00</text>
+  <text x="500" y="86" class="svg-pill" fill="#7b7868">hard-pruned</text>
+  <text x="434" y="108" class="svg-cite">pruned=True</text>
+  <text x="434" y="122" class="svg-cite">CA-only market</text>
+  <text x="434" y="136" class="svg-cite">cannot fire on an</text>
+  <text x="434" y="150" class="svg-cite">FL profile.</text>
+
+  <!-- SURPLUS_LINES -->
+  <rect x="620" y="40" width="180" height="120" rx="6" fill="url(#red-fill)" stroke="#ff7676" stroke-width="1"/>
+  <text x="634" y="62" class="svg-key-text" fill="#ff7676">SURPLUS_LINES</text>
+  <text x="634" y="86" class="svg-result-num" fill="#ff7676">0.45</text>
+  <text x="700" y="86" class="svg-pill">survives</text>
+  <text x="634" y="108" class="svg-cite">Always available.</text>
+  <text x="634" y="122" class="svg-cite">Cost-penalized.</text>
+  <text x="634" y="136" class="svg-cite">Loses to Citizens</text>
+  <text x="634" y="150" class="svg-cite">by 0.20.</text>
+
+  <!-- Threshold bar -->
+  <line x1="20" y1="190" x2="800" y2="190" stroke="#2a3042" stroke-dasharray="3 2"/>
+  <text x="410" y="184" text-anchor="middle" class="svg-cite">— prune threshold = 0.20 — 3 survive · 1 pruned (hard) —</text>
+
+  <!-- Step 4 LLM polish -->
+  <rect x="20" y="206" width="780" height="34" rx="5" fill="url(#violet-fill)" stroke="#a07aff" stroke-width="0.8"/>
+  <text x="34" y="228" class="svg-cite">LLM polish-pass · confirms · trace persists all 4 branch scores so a customer asking "why Citizens not State Farm?" gets a number-backed answer.</text>
+
+  <!-- Output -->
+  <text x="20" y="262" class="svg-step-num">▸ OUTPUT TO GRAPHSTATE</text>
+  <rect x="20" y="272" width="780" height="46" rx="5" fill="url(#amber-fill)" stroke="#f5a623" stroke-width="1.2"/>
+  <text x="34" y="290" class="svg-key-text">state["market_route"] =</text>
+  <text x="220" y="290" class="svg-val-text" fill="#a07aff">EligibilityRoute.CITIZENS</text>
+  <text x="34" y="308" class="svg-cite">downstream impact: PricingAgent will fire citizens_benchmark for sanity comparison; CoverageAgent layers CGCC + hurricane deductibles.</text>
+</svg>

@@ -1,0 +1,7 @@
+state,year,base_premium_usd,scope,source,evidence_id,notes
+CA,2022,1492,HO-3 statewide average,NAIC Homeowners Insurance Report (via III),BENCH-CA-2022-NAIC,"Authoritative NAIC state-level annual premium average; III publication https://www.iii.org/fact-statistic/facts-statistics-homeowners-and-renters-insurance"
+FL,2022,2677,HO-3 statewide average,NAIC Homeowners Insurance Report (via III),BENCH-FL-2022-NAIC,"Authoritative NAIC state-level annual premium average; III publication https://www.iii.org/fact-statistic/facts-statistics-homeowners-and-renters-insurance"
+CA,2025,1480,HO-3 statewide median (250K dwelling reference),Bankrate 2025 average rates study,BENCH-CA-2025-BANKRATE,"Bankrate state averages study; aligns with NAIC 2022 baseline trended to 2025 wildfire moratorium expiry"
+CA,2026,1976,HO-3 statewide median (250K dwelling reference projection),Newsweek / Bankrate 2026 update + NAIC trending,BENCH-CA-2026-NEWSWEEK,"Projected from NAIC 2022 + Bankrate 2025 reflecting 2025 wildfire moratorium expiry; refresh with each new study"
+FL,2025,5285,HO-3 statewide median (250K dwelling reference),Bankrate 2025 average rates study,BENCH-FL-2025-BANKRATE,"Bankrate state averages study; aligns with NAIC 2022 trended to Citizens 2026 rate filing"
+FL,2026,5735,HO-3 statewide median (250K dwelling reference projection),III 2026 update + Citizens rate filing trending,BENCH-FL-2026-III,"Projected from NAIC 2022 + Bankrate 2025; reflects Citizens 2026 rate filing escalation"

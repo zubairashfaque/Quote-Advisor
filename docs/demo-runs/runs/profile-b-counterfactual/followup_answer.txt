@@ -1,0 +1,7 @@
+Counterfactual answer:
+  This is a no-op for your profile — you already have has_pool=False, so 
+removing/changing it doesn't apply. Your premium stays at $5,850–$9,750. The 
+premium is driven by other factors (state base rate, home-value scaling, claims 
+history, and statutory rules), not by the field you asked to change. Status: 
+plausible.
+

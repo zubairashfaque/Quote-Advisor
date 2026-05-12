@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "FL-DED-OPTIONS-2026",
+  "citation": "Fla. Stat. §627.701",
+  "options": [
+    {
+      "option_id": "FL-DED-500",
+      "kind": "flat",
+      "amount_usd": 500,
+      "applies_when_dwelling_le_usd": 250000,
+      "premium_factor": 1.40,
+      "evidence_id": "FL-DED-500"
+    },
+    {
+      "option_id": "FL-DED-2PCT",
+      "kind": "percent_of_coverage_a",
+      "percent": 2,
+      "premium_factor": 1.20,
+      "evidence_id": "FL-DED-2PCT"
+    },
+    {
+      "option_id": "FL-DED-5PCT",
+      "kind": "percent_of_coverage_a",
+      "percent": 5,
+      "premium_factor": 1.00,
+      "evidence_id": "FL-DED-5PCT",
+      "is_default": true
+    },
+    {
+      "option_id": "FL-DED-10PCT",
+      "kind": "percent_of_coverage_a",
+      "percent": 10,
+      "premium_factor": 0.85,
+      "evidence_id": "FL-DED-10PCT"
+    }
+  ]
+}

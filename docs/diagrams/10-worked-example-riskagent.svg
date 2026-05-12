@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 820 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RiskAgent ReAct loop · Profile A">
+<style><![CDATA[
+svg { background: #0a0d12; font-family: 'Inter', system-ui, sans-serif; }
+:root {
+  --bg:#0b0e14; --bg-2:#11151f; --bg-3:#171c28;
+  --ink:#e8e6e0; --ink-2:#b9b6ac; --ink-3:#7b7868;
+  --rule:#2a3042; --rule-2:#1c2030;
+  --amber:#f5a623; --amber-2:#e89110;
+  --cyan:#4dd4ac; --rose:#ff6b9d; --violet:#a07aff;
+  --blue:#5fb3ff; --red:#ff7676;
+  --display:'Fraunces',serif;
+  --serif:'Source Serif 4',Georgia,serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+.svg-box-label{font-family:'JetBrains Mono',monospace;font-size:11px;fill:#e8e6e0;font-weight:500}
+.svg-box-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.1em;font-weight:500}
+.svg-box-sub{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.08em}
+.svg-lane-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;fill:#7b7868;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-title{font-family:'Fraunces',serif;font-size:13px;fill:#e8e6e0;font-style:italic}
+.svg-rail-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#b9b6ac;letter-spacing:.08em}
+.svg-arrow{stroke:#7b7868;stroke-width:1.3;fill:none}
+.svg-arrow.amber{stroke:#f5a623}
+.svg-arrow.cyan{stroke:#4dd4ac}
+.svg-arrow.violet{stroke:#a07aff}
+.svg-arrow.rose{stroke:#ff6b9d}
+.svg-arrow.blue{stroke:#5fb3ff}
+.svg-arrow.red{stroke:#ff7676}
+.svg-arrow.dashed{stroke-dasharray:4 3;opacity:.7}
+.svg-box-fill-bg{fill:#171c28}
+.svg-box-fill-bg-2{fill:#11151f}
+.svg-pill{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#e8e6e0;letter-spacing:.04em}
+.svg-pill-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-result-num{font-family:'JetBrains Mono',monospace;font-size:14px;fill:#f5a623;font-weight:500}
+.svg-result-label{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.1em;text-transform:uppercase}
+.svg-step-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-key-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#e8e6e0}
+.svg-val-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#4dd4ac}
+.svg-cite{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.05em}
+.svg-strike{fill:#7b7868;text-decoration:line-through}
+.svg-winner-glow{filter:drop-shadow(0 0 6px rgba(245,166,35,.45))}
+]]></style>
+  <defs>
+    <marker id="we7-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ff7676"/></marker>
+  </defs>
+
+  <!-- Iteration 1 -->
+  <text x="20" y="18" class="svg-step-num" fill="#ff7676">▸ ITERATION 1</text>
+  <rect x="20" y="28" width="780" height="60" rx="5" fill="url(#red-fill)" stroke="#ff7676" stroke-width="0.8"/>
+  <text x="34" y="46" class="svg-pill" fill="#b9b6ac">THOUGHT</text>
+  <text x="100" y="46" class="svg-pill">"CA + LA county. Wildfire is top concern. Check FHSZ first."</text>
+  <text x="34" y="64" class="svg-pill" fill="#b9b6ac">ACTION</text>
+  <text x="100" y="64" class="svg-val-text">ca_fire_zone(lat=34.05, lon=-118.24)</text>
+  <text x="34" y="80" class="svg-pill" fill="#b9b6ac">OBSERVE</text>
+  <text x="100" y="80" class="svg-pill">{tier: "Moderate", evidence_id: "CALFIRE-FHSZ-LA-001"}</text>
+  <line x1="410" y1="92" x2="410" y2="106" class="svg-arrow red" marker-end="url(#we7-arrow)"/>
+
+  <!-- Iteration 2 -->
+  <text x="20" y="118" class="svg-step-num" fill="#ff7676">▸ ITERATION 2</text>
+  <rect x="20" y="128" width="780" height="60" rx="5" fill="url(#red-fill)" stroke="#ff7676" stroke-width="0.8"/>
+  <text x="34" y="146" class="svg-pill" fill="#b9b6ac">THOUGHT</text>
+  <text x="100" y="146" class="svg-pill">"Moderate FHSZ. Now seismic — CA is on faults."</text>
+  <text x="34" y="164" class="svg-pill" fill="#b9b6ac">ACTION</text>
+  <text x="100" y="164" class="svg-val-text">usgs_seismic(lat=34.05, lon=-118.24)</text>
+  <text x="34" y="180" class="svg-pill" fill="#b9b6ac">OBSERVE</text>
+  <text x="100" y="180" class="svg-pill">{pga_2pct_50yr: 0.58, evidence_id: "USGS-PGA-LA-001"}</text>
+  <line x1="410" y1="192" x2="410" y2="206" class="svg-arrow red" marker-end="url(#we7-arrow)"/>
+
+  <!-- Iteration 3 -->
+  <text x="20" y="218" class="svg-step-num" fill="#ff7676">▸ ITERATION 3</text>
+  <rect x="20" y="228" width="780" height="60" rx="5" fill="url(#red-fill)" stroke="#ff7676" stroke-width="0.8"/>
+  <text x="34" y="246" class="svg-pill" fill="#b9b6ac">THOUGHT</text>
+  <text x="100" y="246" class="svg-pill">"PGA 0.58g is HIGH. Check flood — LA isn't usually flood-prone."</text>
+  <text x="34" y="264" class="svg-pill" fill="#b9b6ac">ACTION</text>
+  <text x="100" y="264" class="svg-val-text">flood_zone(lat=34.05, lon=-118.24)</text>
+  <text x="34" y="280" class="svg-pill" fill="#b9b6ac">OBSERVE</text>
+  <text x="100" y="280" class="svg-pill">{zone: "X", in_sfha: false, evidence_id: "NFHL-LA-001"}</text>
+  <line x1="410" y1="292" x2="410" y2="306" class="svg-arrow red" marker-end="url(#we7-arrow)"/>
+
+  <!-- Iteration 4 (synthesize) -->
+  <text x="20" y="318" class="svg-step-num" fill="#ff7676">▸ ITERATION 4 · SYNTHESIZE</text>
+  <rect x="20" y="328" width="780" height="42" rx="5" fill="url(#red-fill)" stroke="#ff7676" stroke-width="0.8"/>
+  <text x="34" y="348" class="svg-pill" fill="#b9b6ac">THOUGHT</text>
+  <text x="100" y="348" class="svg-pill">"Flood is low. Pool + 1 claim are home-specific (not geographic). Synthesize and stop."</text>
+  <text x="34" y="362" class="svg-cite">→ no further tool call · produces structured RiskFactorList</text>
+  <line x1="410" y1="372" x2="410" y2="388" class="svg-arrow red" marker-end="url(#we7-arrow)"/>
+
+  <!-- Output -->
+  <text x="20" y="400" class="svg-step-num">▸ OUTPUT · 5 RiskFactor RECORDS WITH EVIDENCE_IDS</text>
+  <rect x="20" y="410" width="780" height="118" rx="5" fill="url(#amber-fill)" stroke="#f5a623" stroke-width="1.2"/>
+  <!-- header row -->
+  <text x="34" y="428" class="svg-cite" fill="#f5a623">FACTOR</text>
+  <text x="260" y="428" class="svg-cite" fill="#f5a623">SEVERITY</text>
+  <text x="400" y="428" class="svg-cite" fill="#f5a623">EVIDENCE_ID</text>
+  <line x1="34" y1="434" x2="785" y2="434" stroke="#2a3042" stroke-width="0.7"/>
+  <text x="34" y="450" class="svg-key-text">Wildfire</text><text x="260" y="450" class="svg-val-text">medium</text><text x="400" y="450" class="svg-pill">CALFIRE-FHSZ-LA-001</text>
+  <text x="34" y="466" class="svg-key-text">Seismic</text><text x="260" y="466" class="svg-val-text" fill="#ff7676">high</text><text x="400" y="466" class="svg-pill">USGS-PGA-LA-001</text>
+  <text x="34" y="482" class="svg-key-text">Flood</text><text x="260" y="482" class="svg-val-text" fill="#7b7868">low</text><text x="400" y="482" class="svg-pill">NFHL-LA-001</text>
+  <text x="34" y="498" class="svg-key-text">Pool Liability</text><text x="260" y="498" class="svg-val-text">medium</text><text x="400" y="498" class="svg-pill">RULE-POOL-MED</text>
+  <text x="34" y="514" class="svg-key-text">Claims History</text><text x="260" y="514" class="svg-val-text">medium</text><text x="400" y="514" class="svg-pill">RULE-CLAIMS-1-MED</text>
+</svg>

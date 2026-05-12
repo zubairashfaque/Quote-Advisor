@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "WIND-FORM-OIR-B1-1802-2026",
+  "citation": "Fla. OIR Form OIR-B1-1802 (Uniform Mitigation Verification Inspection Form)",
+  "discount_dimensions": {
+    "roof_shape": {
+      "hip":          {"discount_pct": 0.32, "evidence_id": "WIND-ROOF-HIP"},
+      "gable":        {"discount_pct": 0.10, "evidence_id": "WIND-ROOF-GABLE"},
+      "flat":         {"discount_pct": 0.05, "evidence_id": "WIND-ROOF-FLAT"},
+      "other":        {"discount_pct": 0.00, "evidence_id": "WIND-ROOF-OTHER"}
+    },
+    "roof_cover": {
+      "FBC_compliant":     {"discount_pct": 0.10, "evidence_id": "WIND-COVER-FBC"},
+      "non_FBC":           {"discount_pct": 0.00, "evidence_id": "WIND-COVER-NONFBC"}
+    },
+    "roof_deck_attachment": {
+      "A":  {"discount_pct": 0.00, "evidence_id": "WIND-DECK-A"},
+      "B":  {"discount_pct": 0.04, "evidence_id": "WIND-DECK-B"},
+      "C":  {"discount_pct": 0.08, "evidence_id": "WIND-DECK-C"}
+    },
+    "opening_protection": {
+      "all_impact":      {"discount_pct": 0.18, "evidence_id": "WIND-OPENING-ALL-IMPACT"},
+      "basic_impact":    {"discount_pct": 0.08, "evidence_id": "WIND-OPENING-BASIC-IMPACT"},
+      "none":            {"discount_pct": 0.00, "evidence_id": "WIND-OPENING-NONE"}
+    },
+    "secondary_water_resistance": {
+      "true":  {"discount_pct": 0.04, "evidence_id": "WIND-SWR-YES"},
+      "false": {"discount_pct": 0.00, "evidence_id": "WIND-SWR-NO"}
+    }
+  },
+  "max_aggregate_discount_pct": 0.45
+}

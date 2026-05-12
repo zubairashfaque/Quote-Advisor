@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 820 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="base_premium CSV row lookup · FL 2026">
+<style><![CDATA[
+svg { background: #0a0d12; font-family: 'Inter', system-ui, sans-serif; }
+:root {
+  --bg:#0b0e14; --bg-2:#11151f; --bg-3:#171c28;
+  --ink:#e8e6e0; --ink-2:#b9b6ac; --ink-3:#7b7868;
+  --rule:#2a3042; --rule-2:#1c2030;
+  --amber:#f5a623; --amber-2:#e89110;
+  --cyan:#4dd4ac; --rose:#ff6b9d; --violet:#a07aff;
+  --blue:#5fb3ff; --red:#ff7676;
+  --display:'Fraunces',serif;
+  --serif:'Source Serif 4',Georgia,serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+.svg-box-label{font-family:'JetBrains Mono',monospace;font-size:11px;fill:#e8e6e0;font-weight:500}
+.svg-box-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.1em;font-weight:500}
+.svg-box-sub{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.08em}
+.svg-lane-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;fill:#7b7868;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-title{font-family:'Fraunces',serif;font-size:13px;fill:#e8e6e0;font-style:italic}
+.svg-rail-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#b9b6ac;letter-spacing:.08em}
+.svg-arrow{stroke:#7b7868;stroke-width:1.3;fill:none}
+.svg-arrow.amber{stroke:#f5a623}
+.svg-arrow.cyan{stroke:#4dd4ac}
+.svg-arrow.violet{stroke:#a07aff}
+.svg-arrow.rose{stroke:#ff6b9d}
+.svg-arrow.blue{stroke:#5fb3ff}
+.svg-arrow.red{stroke:#ff7676}
+.svg-arrow.dashed{stroke-dasharray:4 3;opacity:.7}
+.svg-box-fill-bg{fill:#171c28}
+.svg-box-fill-bg-2{fill:#11151f}
+.svg-pill{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#e8e6e0;letter-spacing:.04em}
+.svg-pill-tiny{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#b9b6ac;letter-spacing:.04em}
+.svg-result-num{font-family:'JetBrains Mono',monospace;font-size:14px;fill:#f5a623;font-weight:500}
+.svg-result-label{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#b9b6ac;letter-spacing:.1em;text-transform:uppercase}
+.svg-step-num{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#f5a623;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.svg-key-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#e8e6e0}
+.svg-val-text{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#4dd4ac}
+.svg-cite{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#7b7868;letter-spacing:.05em}
+.svg-strike{fill:#7b7868;text-decoration:line-through}
+.svg-winner-glow{filter:drop-shadow(0 0 6px rgba(245,166,35,.45))}
+]]></style>
+  <!-- CSV view header -->
+  <text x="20" y="20" class="svg-step-num">▸ data/tables/pricing_benchmarks_2025_2026.csv · 6 ROWS</text>
+  <rect x="20" y="30" width="780" height="200" rx="5" fill="#0a0d12" stroke="#7b7868" stroke-width="0.8"/>
+  <!-- header row -->
+  <text x="34" y="50" class="svg-cite" fill="#f5a623">STATE</text>
+  <text x="110" y="50" class="svg-cite" fill="#f5a623">YEAR</text>
+  <text x="180" y="50" class="svg-cite" fill="#f5a623">BASE_PREMIUM_USD</text>
+  <text x="380" y="50" class="svg-cite" fill="#f5a623">SCOPE / SOURCE</text>
+  <text x="680" y="50" class="svg-cite" fill="#f5a623">EVIDENCE_ID</text>
+  <line x1="34" y1="56" x2="785" y2="56" stroke="#2a3042" stroke-width="0.7"/>
+  <!-- rows -->
+  <text x="34" y="78" class="svg-pill">CA</text><text x="110" y="78" class="svg-pill">2022</text><text x="180" y="78" class="svg-val-text">$1,492</text><text x="380" y="78" class="svg-cite">NAIC report (via III)</text><text x="680" y="78" class="svg-pill">BENCH-CA-2022-NAIC</text>
+  <text x="34" y="100" class="svg-pill">FL</text><text x="110" y="100" class="svg-pill">2022</text><text x="180" y="100" class="svg-val-text">$2,677</text><text x="380" y="100" class="svg-cite">NAIC report (via III)</text><text x="680" y="100" class="svg-pill">BENCH-FL-2022-NAIC</text>
+  <text x="34" y="122" class="svg-pill">CA</text><text x="110" y="122" class="svg-pill">2025</text><text x="180" y="122" class="svg-val-text">$1,480</text><text x="380" y="122" class="svg-cite">Bankrate 2025 study</text><text x="680" y="122" class="svg-pill">BENCH-CA-2025-BANKRATE</text>
+  <text x="34" y="144" class="svg-pill">CA</text><text x="110" y="144" class="svg-pill">2026</text><text x="180" y="144" class="svg-val-text">$1,976</text><text x="380" y="144" class="svg-cite">Newsweek/Bankrate 2026 projection</text><text x="680" y="144" class="svg-pill">BENCH-CA-2026-NEWSWEEK</text>
+  <text x="34" y="166" class="svg-pill">FL</text><text x="110" y="166" class="svg-pill">2025</text><text x="180" y="166" class="svg-val-text">$5,285</text><text x="380" y="166" class="svg-cite">Bankrate 2025 study</text><text x="680" y="166" class="svg-pill">BENCH-FL-2025-BANKRATE</text>
+  <!-- highlighted match row -->
+  <rect x="28" y="178" width="765" height="22" rx="3" fill="url(#amber-fill)" stroke="#f5a623" stroke-width="1"/>
+  <text x="34" y="194" class="svg-pill" fill="#f5a623">FL</text>
+  <text x="110" y="194" class="svg-pill" fill="#f5a623">2026</text>
+  <text x="180" y="194" class="svg-result-num" font-size="11">$5,735</text>
+  <text x="380" y="194" class="svg-cite" fill="#f5a623">III 2026 update + Citizens rate filing trending</text>
+  <text x="680" y="194" class="svg-pill" fill="#f5a623">BENCH-FL-2026-III</text>
+  <text x="34" y="220" class="svg-cite">↑ filter state=="FL" AND year==2026 selects this row · exact match (no nearest-year fallback needed)</text>
+
+  <!-- Output panel -->
+  <text x="20" y="262" class="svg-step-num" fill="#f5a623">▸ TOOL OUTPUT (Pydantic-validated)</text>
+  <rect x="20" y="272" width="780" height="78" rx="5" fill="url(#amber-fill)" stroke="#f5a623" stroke-width="1.2"/>
+  <text x="34" y="292" class="svg-key-text">base_premium_usd =</text><text x="200" y="292" class="svg-val-text" fill="#f5a623">5735</text>
+  <text x="280" y="292" class="svg-cite">→ this becomes the multiplicand for every downstream multiplier</text>
+  <text x="34" y="310" class="svg-key-text">scope =</text><text x="100" y="310" class="svg-val-text">HO-3 statewide median (250K dwelling reference projection)</text>
+  <text x="34" y="326" class="svg-key-text">source =</text><text x="100" y="326" class="svg-val-text">III 2026 update + Citizens rate filing trending</text>
+  <text x="34" y="342" class="svg-key-text">evidence_id =</text><text x="142" y="342" class="svg-val-text" fill="#f5a623">BENCH-FL-2026-III</text>
+</svg>

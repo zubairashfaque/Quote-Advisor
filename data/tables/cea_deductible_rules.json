@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "CEA-RULES-2025",
+  "citation": "California Earthquake Authority — 2025 Choice Companion Policy program rules",
+  "deductible_options_pct": [5, 10, 15, 20, 25],
+  "default_recommendation_logic": [
+    {"condition": "year_built >= 1980 AND foundation in ['slab','perimeter']", "recommended_deductible_pct": 10, "rationale": "Modern construction with engineered foundation tolerates lower deductible without runaway premium."},
+    {"condition": "year_built >= 1960 AND year_built < 1980", "recommended_deductible_pct": 15, "rationale": "Pre-modern code construction; mid-range deductible balances premium and out-of-pocket exposure."},
+    {"condition": "year_built < 1960 OR foundation == 'unknown'", "recommended_deductible_pct": 20, "rationale": "Vintage or undetermined foundation; higher deductible is the conservative recommendation."},
+    {"condition": "default", "recommended_deductible_pct": 15, "rationale": "Modal CEA deductible chosen by California homeowners (2024 CEA disclosure)."}
+  ],
+  "premium_factor_per_deductible_pct": {
+    "5":  1.85,
+    "10": 1.40,
+    "15": 1.10,
+    "20": 0.92,
+    "25": 0.80
+  },
+  "min_dwelling_for_offer_usd": 0,
+  "personal_property_optional_pct": [5, 25, 50, 75, 100]
+}

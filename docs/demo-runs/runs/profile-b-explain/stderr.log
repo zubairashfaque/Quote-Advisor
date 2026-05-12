@@ -1,0 +1,71 @@
+/home/zubair-ashfaque/refocusai/.venv/lib/python3.13/site-packages/langgraph/checkpoint/serde/encrypted.py:5: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+Deserializing unregistered type quote_advisor.schemas.RuleSeverity from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'RuleSeverity')]
+Deserializing unregistered type quote_advisor.schemas.RuleFire from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'RuleFire')]
+Deserializing unregistered type quote_advisor.schemas.IntentLabel from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'IntentLabel')]
+Deserializing unregistered type quote_advisor.schemas.EligibilityRoute from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'EligibilityRoute')]
+Deserializing unregistered type quote_advisor.schemas.Severity from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'Severity')]
+Deserializing unregistered type quote_advisor.schemas.RiskFactor from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'RiskFactor')]
+Deserializing unregistered type quote_advisor.schemas.RecommendedCoverage from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'RecommendedCoverage')]
+Deserializing unregistered type quote_advisor.schemas.PremiumRange from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'PremiumRange')]
+Deserializing unregistered type quote_advisor.schemas.FactorChainEntry from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'FactorChainEntry')]
+Deserializing unregistered type quote_advisor.schemas.DecisionNode from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'DecisionNode')]
+Deserializing unregistered type quote_advisor.schemas.ConfidenceBreakdown from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'ConfidenceBreakdown')]
+Deserializing unregistered type quote_advisor.schemas.QuoteOutput from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('quote_advisor.schemas', 'QuoteOutput')]
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8080.49it/s]
+
+DecisionTrace
+DEC-001  IntentClassifier    Initial profile classified as new_quote (no 
+follow-up text).
+DEC-002  StatutoryAgent      ReAct agent fired 5 rule(s) (5 retrieval(s); 0 
+dropped by self-check). [FLDFS-CREDIT-01, FLDFS-HURR-DED-01, FLDFS-CGCC-01, 
+FLDFS-CGCC-01, FLDFS-WIND-MIT-01]
+DEC-003  EligibilityTriage   market_route=citizens: FL Citizens viability vs 
+hurricane tier Very High
+DEC-004  RiskAgent           Identified 3 risk factor(s). 
+[NFHL-12086C0312L-AE-2024, HURDAT-MIAMI-DADE-1900-2025, NRI-FL-12086-2025]
+DEC-005  CoverageAgent       Plan-and-Execute -> 10 coverage line(s). 
+[III-HB-PRICING-01, RULE-FL-HURRICANE-DEDUCTIBLE, RULE-FL-CGCC-MANDATORY, 
+FL-DED-10PCT, WIND-FORM-OIR-B1-1802-2026, RULE-FL-WIND-MITIGATION, 
+NAIC-CG-COVERAGE-01, FL-DED-5PCT, FL-DED-2PCT, RCV-FL-331-2026]
+DEC-006  PricingPlanner      ReWOO plan emitted with 8 tasks.
+DEC-007  PricingAgent        Premium range $5,850-$9,750; chain length 4. 
+[BENCH-FL-2026-III, MULT-SCALING-PER100K, MULT-CLAIMS-0, 
+MULT-CREDIT-NEUTRAL-FL626]
+DEC-008  Validator           Deterministic checks: 0 flag(s); 
+council_invoked=False.
+DEC-009  ConfidenceAggregator  confidence_overall=0.95 (council_invoked=False).
+DEC-001  IntentClassifier    Intent=explanation; rationale=The input is a 
+question about a prior quote, specifically asking for an explanation of its 
+cost.
+DEC-002  FollowupExplain     Answered follow-up; corpus=fl_dfs; chunks=3. 
+[FLDFS-CGCC-01, FLDFS-HURR-DED-01, FLDFS-WIND-MIT-01]
+
+Statutory agent · phase=agent · retrievals=5 · rules=5
+  1. corpus=fl_dfs jurisdiction=FL q='CGCC §627.706' → 3 chunks (FLDFS-CGCC-01, 
+FLDFS-CGCC-01, FLDFS-WIND-MIT-01)
+  2. corpus=fl_dfs jurisdiction=FL q='hurricane deductible §627.701' → 3 chunks 
+(FLDFS-HURR-DED-01, FLDFS-HURR-DED-01, FLDFS-HURR-DED-01)
+  3. corpus=fl_dfs jurisdiction=FL q='sinkhole §627.706(2)' → 3 chunks 
+(FLDFS-CGCC-01, FLDFS-CGCC-01, FLDFS-CGCC-01)
+  4. corpus=fl_dfs jurisdiction=FL q='wind mitigation OIR-B1-1802' → 3 chunks 
+(FLDFS-WIND-MIT-01, FLDFS-WIND-MIT-01, FLDFS-WIND-MIT-01)
+  5. corpus=fl_dfs jurisdiction=FL q='credit-neutral §626.9741' → 3 chunks 
+(FLDFS-CREDIT-01, FLDFS-CREDIT-01, FLDFS-CREDIT-01)
+
+Confidence breakdown: overall=0.95 risk=1.0 coverage=0.9 pricing=1.0 
+grounding=1.0 council_invoked=False council_verdict=None 
+rationale_summary='Strong grounding and pricing scores contribute to high 
+confidence, while the Florida no-credit treatment is a statutory protection, not
+a data quality issue. No hard caps were triggered, and maintaining compliance 
+with statutory rules will help sustain this level of confidence in the future.'
+
+Confidence rationale (LLM):
+  Strong grounding and pricing scores contribute to high confidence, while the 
+Florida no-credit treatment is a statutory protection, not a data quality issue.
+No hard caps were triggered, and maintaining compliance with statutory rules 
+will help sustain this level of confidence in the future.
+
+LangSmith trace: 
+https://smith.langchain.com/projects/refocusai/traces?metadata=thread_id:demo-b
+Tip: filter LangSmith by metadata.thread_id == 'demo-b' to scope to this run.
