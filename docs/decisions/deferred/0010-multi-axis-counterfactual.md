@@ -1,4 +1,4 @@
-# DEC-0010 · Multi-axis Counterfactual via Reflexion ⊕ Tree-of-Thoughts
+# Multi-axis Counterfactual via Reflexion ⊕ Tree-of-Thoughts
 
 **Status:** Accepted
 **Date:** 2026-05-09

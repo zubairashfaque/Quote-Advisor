@@ -1,4 +1,4 @@
-# DEC-0006 · Dedicated Intent Classifier node, not self-routing
+# Dedicated Intent Classifier node, not self-routing
 
 **Status:** Accepted
 **Date:** 2026-05-09

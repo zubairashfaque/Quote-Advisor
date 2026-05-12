@@ -1,4 +1,4 @@
-# DEC-0002 · TypedDict for graph state, Pydantic only at the I/O boundary
+# TypedDict for graph state, Pydantic only at the I/O boundary
 
 **Status:** Accepted
 **Date:** 2026-05-09

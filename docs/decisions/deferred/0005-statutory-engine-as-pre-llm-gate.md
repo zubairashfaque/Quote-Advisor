@@ -1,4 +1,4 @@
-# DEC-0005 · StatutoryRulesEngine as a hard pre-LLM gate
+# StatutoryRulesEngine as a hard pre-LLM gate
 
 **Status:** Superseded by DEC-0011 *(the deterministic engine is kept as the
 Phase-5 safety-net fallback within DEC-0011's 5-phase pipeline; it no longer

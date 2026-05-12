@@ -34,7 +34,7 @@ def make_node(
     """Build a DecisionNode with an auto-incrementing ID."""
     n = next(_NODE_COUNTER)
     return DecisionNode(
-        node_id=f"DEC-{n:03d}",
+        node_id=f"STEP-{n:03d}",
         agent=agent,
         summary=summary,
         parents=list(parents or []),

@@ -1,4 +1,4 @@
-# DEC-0009 · Reflexion memory persists across turns within a thread
+# Reflexion memory persists across turns within a thread
 
 **Status:** Accepted
 **Date:** 2026-05-09

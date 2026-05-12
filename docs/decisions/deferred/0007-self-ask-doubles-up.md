@@ -1,4 +1,4 @@
-# DEC-0007 · Self-Ask doubles up across Intent + Follow-up
+# Self-Ask doubles up across Intent + Follow-up
 
 **Status:** Accepted *(introduced in V5)*
 **Date:** 2026-05-09

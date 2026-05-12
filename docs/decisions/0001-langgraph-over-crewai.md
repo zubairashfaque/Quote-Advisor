@@ -1,4 +1,4 @@
-# DEC-0001 · Use LangGraph as the multi-agent orchestrator
+# Use LangGraph as the multi-agent orchestrator
 
 **Status:** Accepted
 **Date:** 2026-05-09

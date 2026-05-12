@@ -1,4 +1,4 @@
-# DEC-0008 · Per-agent LLM registry over single-model graph
+# Per-agent LLM registry over single-model graph
 
 **Status:** Accepted
 **Date:** 2026-05-09 *(refined 2026-05-10 — OpenAI made default provider)*

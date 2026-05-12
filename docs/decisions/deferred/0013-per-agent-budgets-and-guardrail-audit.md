@@ -1,4 +1,4 @@
-# DEC-0013 · Per-agent budgets and guardrail audit logging
+# Per-agent budgets and guardrail audit logging
 
 **Status:** Accepted
 **Date:** 2026-05-11

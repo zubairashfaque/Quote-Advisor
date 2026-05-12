@@ -1,4 +1,4 @@
-# DEC-0011 · LLM Statutory Agent (ReAct + RAG) supersedes the deterministic engine
+# LLM Statutory Agent (ReAct + RAG) supersedes the deterministic engine
 
 **Status:** Accepted *(supersedes DEC-0005; the deterministic engine is kept
 as the Phase-5 safety-net fallback)*

@@ -1,4 +1,4 @@
-# DEC-0012 · LLM Confidence Explainer augments DEC-0004 (writes prose only)
+# LLM Confidence Explainer augments the deterministic aggregator (writes prose only)
 
 **Status:** Accepted *(augments DEC-0004; does not supersede it)*
 **Date:** 2026-05-10

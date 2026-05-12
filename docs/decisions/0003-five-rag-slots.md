@@ -1,4 +1,4 @@
-# DEC-0003 · Three active RAG corpora with mandatory jurisdiction metadata filter
+# Three active RAG corpora with mandatory jurisdiction metadata filter
 
 **Status:** Accepted *(v1.0 ships with 3 active corpora; 4 deferred to v1.1
 under `data/corpora/deferred/` — see README §17 Future Enhancements)*

@@ -1,4 +1,4 @@
-# DEC-0004 · Confidence as a deterministic 4-signal weighted aggregator
+# Confidence as a deterministic 4-signal weighted aggregator
 
 **Status:** Accepted *(v1.0 ships 4 signals; the original 8-signal design and
 DEC-0012 LLM rationale paragraph are deferred to v1.1 — see README §17)*
