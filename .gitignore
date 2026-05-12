@@ -50,6 +50,9 @@ docs/superpowers/
 # ---------- Large geospatial reference data (exceeds GitHub 100 MB) ----------
 data/geo/calfire_fhsz.geojson
 
+# ---------- Take-home exercise brief (kept locally, not in repo) ----------
+AI Tech Lead Take Home Exercise.pdf
+
 # ---------- Editor / scratch ----------
 *.bak
 *.tmp
